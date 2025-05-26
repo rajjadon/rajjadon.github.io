@@ -19,6 +19,17 @@ const Skills = () => {
       animate={{ opacity: 1, y: 0 }} 
       transition={{ duration: 0.9 }}
     >
+      <Typography 
+          variant="h4" 
+          gutterBottom
+          sx={{ 
+            fontWeight: 600,
+            mb: 4
+          }}
+        >
+          Skills
+        </Typography>
+
       <Paper 
         elevation={4} 
         sx={{ 
@@ -29,17 +40,6 @@ const Skills = () => {
           color: "white" 
         }}
       >
-        <Typography 
-          variant="h4" 
-          gutterBottom
-          sx={{ 
-            color: '#3b82f6',
-            fontWeight: 600,
-            mb: 4
-          }}
-        >
-          Skills
-        </Typography>
 
         <Grid container spacing={4}>
           {categories.map((category, index) => (

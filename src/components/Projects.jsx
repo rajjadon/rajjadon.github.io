@@ -1,25 +1,13 @@
 import React from 'react';
-import { Typography, Box, Chip, Link, Stack } from '@mui/material';
+import { Typography, Box, Chip, Link, Stack, Paper } from '@mui/material';
 import { motion } from 'framer-motion';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import projectsData from '../data/projects.json';
 
 const Projects = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.9 }}
-    >
-      <Box
-        sx={{
-          bgcolor: '#1e1e1e',
-          borderRadius: 4,
-          p: { xs: 2, sm: 4 },
-          color: 'white'
-        }}
-      >
-        <Typography 
+    <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9 }}>
+      <Typography 
           variant="h2" 
           component="h2"
           sx={{ 
@@ -31,6 +19,7 @@ const Projects = () => {
         >
           Projects
         </Typography>
+      <Paper elevation={4} sx={{ p: 3, mb: 5, borderRadius: 4, bgcolor: "background.paper" }}>
 
         <Stack spacing={3}>
           {projectsData.map((project, index) => (
@@ -51,32 +40,40 @@ const Projects = () => {
                   }
                 }}
               >
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', mb: 1 }}>
-                  <Box>
+                {/* Title and Company */}
+                <Box sx={{ mb: 1 }}>
+                  <Typography
+                    variant="h5"
+                    sx={{ 
+                      fontWeight: 600,
+                      color: '#3b82f6',
+                      mb: 0.5
+                    }}
+                  >
+                    {project.name}
+                  </Typography>
+                  {project.company && (
                     <Typography
-                      variant="h5"
+                      variant="subtitle1"
                       sx={{ 
-                        fontWeight: 600,
-                        color: '#3b82f6',
-                        mb: 0.5
+                        color: '#94a3b8',
+                        mb: 1
                       }}
                     >
-                      {project.name}
+                      {project.company}
                     </Typography>
-                    {project.company && (
-                      <Typography
-                        variant="subtitle1"
-                        sx={{ 
-                          color: '#94a3b8',
-                          mb: 1
-                        }}
-                      >
-                        {project.company}
-                      </Typography>
-                    )}
-                  </Box>
-                  {/* Handle both single and multiple links */}
-                  <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+                  )}
+                </Box>
+
+                {/* Links Row with Wrap */}
+                {(project.link || project.links) && (
+                  <Stack
+                    direction="row"
+                    spacing={2}
+                    flexWrap="wrap"
+                    useFlexGap
+                    sx={{ mb: 2 }}
+                  >
                     {project.link && (
                       <Link 
                         href={project.link}
@@ -84,9 +81,10 @@ const Projects = () => {
                         rel="noopener"
                         sx={{
                           color: '#3b82f6',
-                          display: 'flex',
+                          display: 'inline-flex',
                           alignItems: 'center',
                           gap: 0.5,
+                          whiteSpace: 'nowrap',
                           textDecoration: 'none',
                           '&:hover': {
                             textDecoration: 'underline'
@@ -104,9 +102,10 @@ const Projects = () => {
                         rel="noopener"
                         sx={{
                           color: '#3b82f6',
-                          display: 'flex',
+                          display: 'inline-flex',
                           alignItems: 'center',
                           gap: 0.5,
+                          whiteSpace: 'nowrap',
                           textDecoration: 'none',
                           '&:hover': {
                             textDecoration: 'underline'
@@ -116,9 +115,10 @@ const Projects = () => {
                         Link {i + 1} <OpenInNewIcon sx={{ fontSize: 16 }} />
                       </Link>
                     ))}
-                  </Box>
-                </Box>
+                  </Stack>
+                )}
 
+                {/* Description */}
                 <Typography
                   variant="body1"
                   sx={{ 
@@ -130,6 +130,7 @@ const Projects = () => {
                   {project.description}
                 </Typography>
 
+                {/* Tech Chips */}
                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
                   {project.tech.map((tech) => (
                     <Chip
@@ -150,7 +151,7 @@ const Projects = () => {
             </motion.div>
           ))}
         </Stack>
-      </Box>
+      </Paper>
     </motion.div>
   );
 };
