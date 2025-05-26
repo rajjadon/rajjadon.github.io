@@ -1,41 +1,156 @@
 import React from 'react';
-import { Typography, Paper, Grid, Box, Chip, Link } from '@mui/material';
+import { Typography, Box, Chip, Link, Stack } from '@mui/material';
 import { motion } from 'framer-motion';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import projectsData from '../data/projects.json';
 
 const Projects = () => {
   return (
-    <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}>
-      <Typography variant="h4" sx={{
-        fontWeight: 700,
-        mb: 2,
-        pl: 2,
-      }}>Projects</Typography>
-      <Paper elevation={4} sx={{ p: 3, mb: 5, borderRadius: 4, bgcolor: "background.paper" }}>
-        <Grid container spacing={2}>
-          {projectsData.map(proj => (
-            <Grid item xs={12} md={6} key={proj.name}>
-              <Paper sx={{ p: 2, height: "100%", bgcolor: "#202124" }}>
-                <Typography variant="h6">{proj.name}</Typography>
-                <Typography variant="subtitle2" color="primary">
-                  {proj.company}
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.9 }}
+    >
+      <Box
+        sx={{
+          bgcolor: '#1e1e1e',
+          borderRadius: 4,
+          p: { xs: 2, sm: 4 },
+          color: 'white'
+        }}
+      >
+        <Typography 
+          variant="h2" 
+          component="h2"
+          sx={{ 
+            fontSize: { xs: '2rem', sm: '3rem' },
+            fontWeight: 700,
+            mb: 4,
+            color: 'white'
+          }}
+        >
+          Projects
+        </Typography>
+
+        <Stack spacing={3}>
+          {projectsData.map((project, index) => (
+            <motion.div
+              key={project.name}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <Box
+                sx={{
+                  bgcolor: '#2d2d2d',
+                  borderRadius: 3,
+                  p: 3,
+                  transition: 'transform 0.2s ease-in-out',
+                  '&:hover': {
+                    transform: 'translateY(-4px)'
+                  }
+                }}
+              >
+                <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', mb: 1 }}>
+                  <Box>
+                    <Typography
+                      variant="h5"
+                      sx={{ 
+                        fontWeight: 600,
+                        color: '#3b82f6',
+                        mb: 0.5
+                      }}
+                    >
+                      {project.name}
+                    </Typography>
+                    {project.company && (
+                      <Typography
+                        variant="subtitle1"
+                        sx={{ 
+                          color: '#94a3b8',
+                          mb: 1
+                        }}
+                      >
+                        {project.company}
+                      </Typography>
+                    )}
+                  </Box>
+                  {/* Handle both single and multiple links */}
+                  <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+                    {project.link && (
+                      <Link 
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener"
+                        sx={{
+                          color: '#3b82f6',
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: 0.5,
+                          textDecoration: 'none',
+                          '&:hover': {
+                            textDecoration: 'underline'
+                          }
+                        }}
+                      >
+                        View <OpenInNewIcon sx={{ fontSize: 16 }} />
+                      </Link>
+                    )}
+                    {project.links && project.links.map((link, i) => (
+                      <Link
+                        key={i}
+                        href={link}
+                        target="_blank"
+                        rel="noopener"
+                        sx={{
+                          color: '#3b82f6',
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: 0.5,
+                          textDecoration: 'none',
+                          '&:hover': {
+                            textDecoration: 'underline'
+                          }
+                        }}
+                      >
+                        Link {i + 1} <OpenInNewIcon sx={{ fontSize: 16 }} />
+                      </Link>
+                    ))}
+                  </Box>
+                </Box>
+
+                <Typography
+                  variant="body1"
+                  sx={{ 
+                    color: '#e2e8f0',
+                    mb: 2,
+                    lineHeight: 1.6
+                  }}
+                >
+                  {project.description}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {proj.description}
-                </Typography>
-                <Box sx={{ display: "flex", gap: 1, flexWrap: "wrap", mt: 1, mb: 1 }}>
-                  {proj.skills.map(skill => (
-                    <Chip key={skill} label={skill} size="small" sx={{ bgcolor: "#2c2f33", color: "#fff" }} />
+
+                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+                  {project.tech.map((tech) => (
+                    <Chip
+                      key={tech}
+                      label={tech}
+                      sx={{
+                        bgcolor: '#1e1e1e',
+                        color: '#94a3b8',
+                        fontWeight: 500,
+                        '&:hover': {
+                          bgcolor: '#3b3b3b'
+                        }
+                      }}
+                    />
                   ))}
                 </Box>
-                <Link href={proj.link} target="_blank" rel="noopener" underline="hover">
-                  View on Play Store
-                </Link>
-              </Paper>
-            </Grid>
+              </Box>
+            </motion.div>
           ))}
-        </Grid>
-      </Paper>
+        </Stack>
+      </Box>
     </motion.div>
   );
 };

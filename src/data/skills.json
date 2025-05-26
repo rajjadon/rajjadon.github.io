@@ -1,30 +1,8 @@
-[
-    {
-      "title": "Languages",
-      "items": ["Kotlin", "Java", "Dart", "JavaScript"]
-    },
-    {
-      "title": "Frameworks & Tools",
-      "items": [
-        "Android SDK",
-        "Jetpack Compose",
-        "Flutter",
-        "Retrofit",
-        "Firebase",
-        "Kotlin Coroutines",
-        "KMP",
-        "Dagger Hilt",
-        "Koin"
-      ]
-    },
-    {
-      "title": "Other",
-      "items": [
-        "Clean Architecture",
-        "MVVM",
-        "Data Structures",
-        "Dependency Injection",
-        "Git"
-      ]
-    }
-  ]
+{
+  "languages": ["Kotlin", "JavaScript", "Node.js"],
+  "mobile": ["Android (Jetpack Compose, XML)", "Flutter", "React Native"],
+  "architecture": ["MVVM", "Clean Architecture", "Multi-module", "SOLID principles"],
+  "tools": ["Dagger Hilt", "Koin", "BLE", "Firebase", "Coroutines", "Navigation Component", "Data Binding", "Jetpack Libraries"],
+  "devOps": ["CI/CD", "Crashlytics", "GitHub"],
+  "ai": ["LLM Integration", "WebSockets", "Dynamic Tool Actions"]
+}

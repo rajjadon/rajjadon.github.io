@@ -1,30 +1,88 @@
 [
-    {
-      "name": "JioMart Partner",
-      "company": "Fynd (Shopsense Retail Technologies Ltd.)",
-      "description": "JioMart Partner is a B2B business app for wholesale shopping needs at competitive prices.",
-      "skills": ["Kotlin", "Android", "Data Structures", "Android SDK", "Coroutines"],
-      "link": "https://play.google.com/store/apps/details?id=com.jiomart.partner"
-    },
-    {
-      "name": "Ola Electric Companion App",
-      "company": "Ola Electric",
-      "description": "Developed the official companion app for Ola Bike, supporting real-time updates and device integration.",
-      "skills": ["Kotlin", "Android", "Dependency Injection"],
-      "link": "https://play.google.com/store/apps/details?id=com.olaelectric.olacabs"
-    },
-    {
-      "name": "Probo",
-      "company": "Primathon",
-      "description": "Contributed to the development and improvement of the Probo prediction market app.",
-      "skills": ["Kotlin", "Android", "MVVM"],
-      "link": "https://play.google.com/store/apps/details?id=app.probo.probo"
-    },
-    {
-      "name": "Fynd Store",
-      "company": "Fynd (Shopsense Retail Technologies Ltd.)",
-      "description": "Retail and fashion app for online shopping with a seamless experience.",
-      "skills": ["Kotlin", "Android", "Jetpack Compose"],
-      "link": "https://play.google.com/store/apps/details?id=shop.fynd.store"
-    }
-  ]
+  {
+    "name": "Metro Wholesale",
+    "company": "Fynd",
+    "description": "PWA app for Horeca and Institution B2B users",
+    "tech": ["Kotlin", "JavaScript", "Dagger Hilt", "MVVM", "DataStore", "Coroutines"],
+    "team_size": 1,
+    "link": "https://play.google.com/store/search?q=metro+wholesale+b2b+app"
+  },
+  {
+    "name": "Tira Beauty",
+    "company": "Fynd",
+    "description": "Beauty and cosmetics e-commerce app",
+    "tech": ["Kotlin", "Dagger Hilt", "MVVM", "Multi-module", "Navigation Component"],
+    "team_size": 2,
+    "link": "https://play.google.com/store/apps/details?id=com.ril.tira"
+  },
+  {
+    "name": "Fynd Store OS",
+    "company": "Fynd",
+    "description": "Retail operating system app with BLE integration",
+    "tech": ["Kotlin", "Jetpack Compose", "BLE", "MVVM"],
+    "team_size": 2,
+    "link": "https://play.google.com/store/search?q=fynd+store+os"
+  },
+  {
+    "name": "Pixelbin Suite",
+    "company": "Fynd",
+    "description": "5 apps built in Flutter for media upscaling, watermark removal, etc.",
+    "tech": ["Flutter", "Service Locator", "MVVM"],
+    "team_size": 4,
+    "links": [
+      "https://play.google.com/store/apps/details?id=com.pixelbin.upscale.media",
+      "https://play.google.com/store/apps/details?id=com.pixelbin.watermarkremover.io",
+      "https://play.google.com/store/apps/details?id=com.pixelbin.erase.bg",
+      "https://play.google.com/store/apps/details?id=com.pixelbin.shrink.media",
+      "https://play.google.com/store/apps/details?id=com.pixelbin.convertfiles.ai"
+    ]
+  },
+  {
+    "name": "SwapEasy Diagnostic",
+    "description": "React Native app for phone diagnostics",
+    "tech": ["React Native", "Android/iOS APIs"],
+    "team_size": 1,
+    "link": "https://play.google.com/store/apps/details?id=com.diagnosticsse"
+  },
+  {
+    "name": "Copilot SDK",
+    "description": "SDK for AI tool action integration",
+    "tech": ["Kotlin", "Node.js", "JavaScript", "WebSockets", "LLMs"],
+    "team_size": 2,
+    "links": [
+      "https://github.com/CopilotLive/sdk-android-examples",
+      "https://docs.copilot.live/ai-actions/client/"
+    ]
+  },
+  {
+    "name": "Companion App",
+    "company": "OLA Electric",
+    "description": "Implemented Party Mode, Proximity Lock/Unlock, Document Upload",
+    "tech": ["Kotlin", "Jetpack Compose", "BLE", "MVVM"],
+    "team_size": 1,
+    "link": "https://play.google.com/store/apps/details?id=com.olaelectric.companion"
+  },
+  {
+    "name": "Probo",
+    "company": "Primathon",
+    "description": "Polling and prediction app built from scratch",
+    "tech": ["Kotlin", "Jetpack Compose", "Koin", "MVVM"],
+    "team_size": 3,
+    "link": "https://play.google.com/store/apps/details?id=com.proboapk.newproboyesno"
+  },
+  {
+    "name": "Emma Sleep",
+    "company": "Applaunch",
+    "description": "App for German mattress company",
+    "tech": ["Kotlin", "Dagger2", "BLE", "MVVM"],
+    "team_size": 1
+  },
+  {
+    "name": "SchoolMitra",
+    "company": "SchoolMitra",
+    "description": "Educational Android app revamped independently",
+    "tech": ["Kotlin", "Dagger2", "MVVM", "BLE"],
+    "team_size": 1,
+    "link": "https://play.google.com/store/search?q=schoolmitra"
+  }
+]
