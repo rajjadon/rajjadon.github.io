@@ -26,9 +26,6 @@ const Contact = () => (
         </Link>
       </Typography>
     </Box>
-    <Button variant="contained" href="/resume.pdf" target="_blank" sx={{ mt: 2 }}>
-      Download Resume
-    </Button>
   </Paper>
 );
 
