@@ -1,28 +1,25 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
   palette: {
-    mode: 'light',
+    mode: "dark",
     primary: {
-      main: '#1769aa',
+      main: "#0a66c2", // LinkedIn blue
     },
     secondary: {
-      main: '#43a047',
+      main: "#e1e9ee", // Light blue for chips, etc.
     },
     background: {
-      default: '#f9fafb',
-      paper: '#fff',
+      default: "#18191a", // LinkedIn dark background
+      paper: "#242526",   // Card background
     },
-  },
-  shape: {
-    borderRadius: 12,
+    text: {
+      primary: "#e4e6eb", // LinkedIn text color in dark
+      secondary: "#b0b3b8",
+    }
   },
   typography: {
     fontFamily: 'Roboto, "Helvetica Neue", Arial, sans-serif',
-    h1: { fontWeight: 700, fontSize: '2.5rem', letterSpacing: '-1.5px' },
-    h2: { fontWeight: 700, fontSize: '2rem' },
-    h3: { fontWeight: 700, fontSize: '1.5rem' },
-    button: { textTransform: 'none', fontWeight: 600 },
   },
 });
 
