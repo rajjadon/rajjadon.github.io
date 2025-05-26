@@ -3,10 +3,21 @@ import DownloadIcon from "@mui/icons-material/Download";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
-import { Box, Typography, Button, IconButton, Avatar } from "@mui/material";
+import PhoneIcon from "@mui/icons-material/Phone";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import { Box, Typography, IconButton, Avatar, Button, Tooltip } from "@mui/material";
 import { motion } from "framer-motion";
 
-const Profile = () => (
+const Profile = () => {
+  const handlePhoneClick = () => {
+    window.location.href = 'tel:+918296945219';
+  };
+
+  const handleEmailClick = () => {
+    window.location.href = 'mailto:pratap.rajjadon07@gmail.com';
+  };
+
+  return (
     <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9 }}>
         <Box
           display="flex"
@@ -39,17 +50,62 @@ const Profile = () => (
           <Typography variant="h5" color="text.secondary" align="center" sx={{ mt: 1 }}>
             SDE-2, Android • Fynd • Ex Ola Electric
           </Typography>
-          <Typography variant="subtitle1" color="text.secondary" align="center" sx={{ mb: 1 }}>
+          <Typography variant="subtitle1" color="text.secondary" align="center" sx={{ mb: 3 }}>
             Bengaluru, India
           </Typography>
-          <Box sx={{ display: "flex", gap: 2, mt: 2 }}>
-            <IconButton href="mailto:pratap.rajjadon07@gmail.com" color="primary"><EmailIcon fontSize="large" /></IconButton>
-            <IconButton href="https://github.com/rajjadon" target="_blank" color="primary"><GitHubIcon fontSize="large" /></IconButton>
-            <IconButton href="https://www.linkedin.com/in/raj-pratap-singh-jadon-547801147/" target="_blank" color="primary"><LinkedInIcon fontSize="large" /></IconButton>
-            <Button variant="contained" href="/Raj Pratap Singh Resume (1).pdf" target="_blank" sx={{ ml: 2 }} startIcon={<DownloadIcon />}>Resume</Button>
+          
+          <Button 
+            variant="contained" 
+            href="/Raj Pratap Singh Resume (1).pdf" 
+            target="_blank"
+            startIcon={<DownloadIcon />}
+            sx={{ 
+              mb: 3,
+              px: 4,
+              py: 1,
+              borderRadius: 2,
+              fontSize: "1.1rem",
+              fontWeight: 600,
+              textTransform: "none",
+              bgcolor: "#0a66c2",
+              '&:hover': {
+                bgcolor: "#084d93"
+              }
+            }}
+          >
+            Download Resume
+          </Button>
+
+          <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2, justifyContent: "center" }}>
+            <Tooltip title="Call +91 8296945219">
+              <IconButton onClick={handlePhoneClick} color="primary">
+                <PhoneIcon fontSize="large" />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title="Chat on WhatsApp">
+              <IconButton href="https://wa.me/918296945219" target="_blank" color="primary">
+                <WhatsAppIcon fontSize="large" />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title="pratap.rajjadon07@gmail.com">
+              <IconButton onClick={handleEmailClick} color="primary">
+                <EmailIcon fontSize="large" />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title="View GitHub Profile">
+              <IconButton href="https://github.com/rajjadon" target="_blank" color="primary">
+                <GitHubIcon fontSize="large" />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title="View LinkedIn Profile">
+              <IconButton href="https://www.linkedin.com/in/raj-pratap-singh-jadon-547801147/" target="_blank" color="primary">
+                <LinkedInIcon fontSize="large" />
+              </IconButton>
+            </Tooltip>
           </Box>
         </Box>
     </motion.div>
-);
+  );
+};
 
 export default Profile;
