@@ -5,7 +5,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Contact = () => (
-  <Paper elevation={2} sx={{ p: 3, maxWidth: 600 }}>
+  <Paper elevation={4} sx={{ p: 3, mb: 5, borderRadius: 4, bgcolor: "background.paper" }}>
     <Typography variant="h4" gutterBottom>
       Contact
     </Typography>
