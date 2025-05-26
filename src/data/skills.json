@@ -1,0 +1,30 @@
+[
+    {
+      "title": "Languages",
+      "items": ["Kotlin", "Java", "Dart", "JavaScript"]
+    },
+    {
+      "title": "Frameworks & Tools",
+      "items": [
+        "Android SDK",
+        "Jetpack Compose",
+        "Flutter",
+        "Retrofit",
+        "Firebase",
+        "Kotlin Coroutines",
+        "KMP",
+        "Dagger Hilt",
+        "Koin"
+      ]
+    },
+    {
+      "title": "Other",
+      "items": [
+        "Clean Architecture",
+        "MVVM",
+        "Data Structures",
+        "Dependency Injection",
+        "Git"
+      ]
+    }
+  ]

@@ -1,0 +1,31 @@
+# Source files
+src/
+
+# Config files
+.gitignore
+.env*
+.eslintrc*
+.prettierrc*
+.babelrc*
+vite.config.js
+
+# Documentation
+docs/
+*.md
+
+# Tests
+tests/
+__tests__/
+*.test.js
+*.spec.js
+
+# Development files
+.vscode/
+.idea/
+.github/
+
+# Misc
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

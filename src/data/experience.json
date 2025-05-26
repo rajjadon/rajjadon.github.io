@@ -1,0 +1,57 @@
+[
+    {
+      "title": "SDE - 2",
+      "company": "Fynd (Shopsense Retail Technologies Ltd.)",
+      "location": "Bengaluru",
+      "range": "Oct 2022 — Present",
+      "responsibilities": [
+        "Develop and maintain Android applications with focus on performance and quality.",
+        "Implement new features using modern Android tools and frameworks.",
+        "Collaborate with cross-functional teams for smooth delivery.",
+        "Mentor junior engineers and participate in code reviews."
+      ]
+    },
+    {
+      "title": "SDE 1 Android",
+      "company": "Ola Electric",
+      "location": "Bengaluru",
+      "range": "June 2022 — Sep 2022",
+      "responsibilities": [
+        "Developed and maintained the Ola Bike companion app.",
+        "Implemented new features using Kotlin and modern best practices.",
+        "Ensured application performance and quality."
+      ]
+    },
+    {
+      "title": "Senior Android Developer",
+      "company": "Primathon",
+      "location": "Gurgaon",
+      "range": "Dec 2021 — May 2022",
+      "responsibilities": [
+        "Led Android app development for multiple products.",
+        "Mentored junior developers and conducted code reviews.",
+        "Architected robust, maintainable mobile codebases."
+      ]
+    },
+    {
+      "title": "Android Developer",
+      "company": "Applaunch.io",
+      "location": "Bengaluru",
+      "range": "Nov 2020 — Dec 2021",
+      "responsibilities": [
+        "Developed Android apps for various clients.",
+        "Participated in app design, architecture, and testing."
+      ]
+    },
+    {
+      "title": "Android Developer",
+      "company": "SchoolMitra",
+      "location": "Gurgaon",
+      "range": "Jan 2019 — Nov 2020",
+      "responsibilities": [
+        "Developed educational Android applications.",
+        "Implemented user-friendly interfaces.",
+        "Conducted testing and debugging."
+      ]
+    }
+  ]

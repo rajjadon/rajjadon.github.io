@@ -1,0 +1,30 @@
+[
+    {
+      "name": "JioMart Partner",
+      "company": "Fynd (Shopsense Retail Technologies Ltd.)",
+      "description": "JioMart Partner is a B2B business app for wholesale shopping needs at competitive prices.",
+      "skills": ["Kotlin", "Android", "Data Structures", "Android SDK", "Coroutines"],
+      "link": "https://play.google.com/store/apps/details?id=com.jiomart.partner"
+    },
+    {
+      "name": "Ola Electric Companion App",
+      "company": "Ola Electric",
+      "description": "Developed the official companion app for Ola Bike, supporting real-time updates and device integration.",
+      "skills": ["Kotlin", "Android", "Dependency Injection"],
+      "link": "https://play.google.com/store/apps/details?id=com.olaelectric.olacabs"
+    },
+    {
+      "name": "Probo",
+      "company": "Primathon",
+      "description": "Contributed to the development and improvement of the Probo prediction market app.",
+      "skills": ["Kotlin", "Android", "MVVM"],
+      "link": "https://play.google.com/store/apps/details?id=app.probo.probo"
+    },
+    {
+      "name": "Fynd Store",
+      "company": "Fynd (Shopsense Retail Technologies Ltd.)",
+      "description": "Retail and fashion app for online shopping with a seamless experience.",
+      "skills": ["Kotlin", "Android", "Jetpack Compose"],
+      "link": "https://play.google.com/store/apps/details?id=shop.fynd.store"
+    }
+  ]
