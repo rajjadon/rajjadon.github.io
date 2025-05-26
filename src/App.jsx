@@ -17,7 +17,6 @@ export default function App() {
       <Skills/>
       <Projects/>
       <Education/>
-      <Contact/>
     </Container>
   );
 }
