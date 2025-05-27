@@ -20,8 +20,12 @@
     "react-to-pdf": "^2.0.0"
   },
   "devDependencies": {
+    "@types/node": "^22.15.21",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.5",
     "@vitejs/plugin-react": "^4.0.4",
     "gh-pages": "^6.0.0",
+    "typescript": "^5.8.3",
     "vite": "^4.4.9"
   }
 }
