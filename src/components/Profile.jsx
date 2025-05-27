@@ -56,7 +56,7 @@ const Profile = () => {
           
           <Button 
             variant="contained" 
-            href="/Raj Pratap Singh Resume (1).pdf" 
+            href="https://drive.google.com/drive/folders/1k9QBuoWsK6i_PRywvFrivnnvCIGusdFy?usp=sharing"
             target="_blank"
             startIcon={<DownloadIcon />}
             sx={{ 

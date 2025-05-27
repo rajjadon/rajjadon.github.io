@@ -1,57 +1,62 @@
 [
-    {
-      "title": "SDE - 2",
-      "company": "Fynd (Shopsense Retail Technologies Ltd.)",
-      "location": "Bengaluru",
-      "range": "Oct 2022 — Present",
-      "responsibilities": [
-        "Develop and maintain Android applications with focus on performance and quality.",
-        "Implement new features using modern Android tools and frameworks.",
-        "Collaborate with cross-functional teams for smooth delivery.",
-        "Mentor junior engineers and participate in code reviews."
-      ]
-    },
-    {
-      "title": "SDE 1 Android",
-      "company": "Ola Electric",
-      "location": "Bengaluru",
-      "range": "June 2022 — Sep 2022",
-      "responsibilities": [
-        "Developed and maintained the Ola Bike companion app.",
-        "Implemented new features using Kotlin and modern best practices.",
-        "Ensured application performance and quality."
-      ]
-    },
-    {
-      "title": "Senior Android Developer",
-      "company": "Primathon",
-      "location": "Gurgaon",
-      "range": "Dec 2021 — May 2022",
-      "responsibilities": [
-        "Led Android app development for multiple products.",
-        "Mentored junior developers and conducted code reviews.",
-        "Architected robust, maintainable mobile codebases."
-      ]
-    },
-    {
-      "title": "Android Developer",
-      "company": "Applaunch.io",
-      "location": "Bengaluru",
-      "range": "Nov 2020 — Dec 2021",
-      "responsibilities": [
-        "Developed Android apps for various clients.",
-        "Participated in app design, architecture, and testing."
-      ]
-    },
-    {
-      "title": "Android Developer",
-      "company": "SchoolMitra",
-      "location": "Gurgaon",
-      "range": "Jan 2019 — Nov 2020",
-      "responsibilities": [
-        "Developed educational Android applications.",
-        "Implemented user-friendly interfaces.",
-        "Conducted testing and debugging."
-      ]
-    }
-  ]
+  {
+    "title": "SDE - 2",
+    "company": "Fynd (Shopsense Retail Technologies Ltd.)",
+    "location": "Bengaluru",
+    "range": "Oct 2022 — Present",
+    "responsibilities": [
+      "Led development of key projects including Metro Wholesale, Tira Beauty, Fynd Store OS, Pixelbin Suite, and Copilot SDK.",
+      "Architected Android and Flutter applications using MVVM, Clean Architecture, multi-module structure, and SOLID principles.",
+      "Implemented advanced features such as BLE integration, modular SDKs, image processing, and LLM-powered AI actions.",
+      "Collaborated with cross-functional teams across backend, design, and product to ensure timely delivery and feature alignment.",
+      "Mentored junior developers, conducted thorough code reviews, and enforced best practices in performance, testing, and maintainability.",
+      "Integrated Firebase (Crashlytics, Analytics, Remote Config), WebSockets, and CI/CD pipelines for production-grade delivery."
+    ]
+  },
+  {
+    "title": "SDE 1 Android",
+    "company": "Ola Electric",
+    "location": "Bengaluru",
+    "range": "June 2022 — Sep 2022",
+    "responsibilities": [
+      "Built and maintained features like Party Mode, Proximity Unlock, and Document Upload in the Ola Companion app.",
+      "Used Jetpack Compose, BLE, and WorkManager to deliver seamless user-device interaction.",
+      "Applied modern architectural patterns (MVVM + Koin + Clean Architecture) with multi-module project setup.",
+      "Worked closely with QA and product to ensure performance, user experience, and hardware compatibility."
+    ]
+  },
+  {
+    "title": "Senior Android Developer",
+    "company": "Primathon",
+    "location": "Gurgaon",
+    "range": "Dec 2021 — May 2022",
+    "responsibilities": [
+      "Led a 3-member Android team to develop the Probo app from scratch using Kotlin, Compose, and Koin.",
+      "Designed and implemented clean, scalable architecture with real-time Socket.IO support.",
+      "Coordinated with product and backend teams to deliver critical features with real-time polling logic.",
+      "Owned feature testing, build releases, and code quality enforcement."
+    ]
+  },
+  {
+    "title": "Android Developer",
+    "company": "Applaunch.io",
+    "location": "Bengaluru",
+    "range": "Nov 2020 — Dec 2021",
+    "responsibilities": [
+      "Developed the Emma Sleep app for a German client using Dagger 2, BLE, and MVVM architecture.",
+      "Handled full-cycle development from screen implementation to integration with logistics APIs.",
+      "Worked in an agile environment and contributed to architectural planning and refactoring."
+    ]
+  },
+  {
+    "title": "Android Developer",
+    "company": "SchoolMitra",
+    "location": "Gurgaon",
+    "range": "Jan 2019 — Nov 2020",
+    "responsibilities": [
+      "Independently revamped the SchoolMitra Android app with modern architecture and design principles.",
+      "Implemented student attendance, homework tracking, and school notification modules.",
+      "Led QA testing, bug fixing, and Play Store deployment across multiple product updates."
+    ]
+  }
+]

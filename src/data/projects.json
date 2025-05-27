@@ -1,33 +1,116 @@
 [
   {
     "name": "Metro Wholesale",
+    "name_link": "[Metro Wholesale](https://play.google.com/store/apps/details?id=in.co.metro.customerappmetro)",
     "company": "Fynd",
     "description": "India's leading B2B wholesale platform offering round-the-clock access to a wide range of high-quality products at wholesale prices for Kirana stores, restaurants, and SMEs.",
-    "tech": ["Kotlin", "Dagger Hilt", "MVVM", "Clean Architecture", "Jetpack Libraries", "JavaScript", "Coroutines", "DataStore", "Retrofit", "Room", "Material Design 3", "Unit Testing (JUnit, Mockito)"],
+    "responsibilities": [
+      "Independently led the Android PWA app development for Horeca and Institution sectors.",
+      "Designed and implemented scalable architecture using MVVM and Clean Architecture principles.",
+      "Integrated Dagger Hilt for dependency injection and optimized performance using Kotlin Coroutines.",
+      "Collaborated with backend developers for API design and improved data layer reliability using DataStore and Room.",
+      "Wrote unit tests to maintain stability across modules."
+    ],
+    "tech": [
+      "Kotlin",
+      "Dagger Hilt",
+      "MVVM",
+      "Clean Architecture",
+      "Jetpack Libraries",
+      "JavaScript",
+      "Coroutines",
+      "DataStore",
+      "Retrofit",
+      "Room",
+      "Material Design 3",
+      "Unit Testing (JUnit, Mockito)"
+    ],
     "team_size": 1,
     "link": "https://play.google.com/store/apps/details?id=in.co.metro.customerappmetro"
   },
   {
     "name": "Tira Beauty",
+    "name_link": "[Tira Beauty](https://play.google.com/store/apps/details?id=com.ril.tira)",
     "company": "Fynd",
     "description": "An omnichannel beauty retail platform by Reliance Retail featuring a curated catalog of global and Indian beauty brands, with dynamic UI and deep-linking.",
-    "tech": ["Kotlin", "MVVM", "Dagger Hilt", "Clean Architecture", "Jetpack Navigation", "Data Binding", "Kotlin DSL", "Coroutines", "Modular Architecture", "Firebase Analytics", "Crashlytics", "Unit Testing"],
+    "responsibilities": [
+      "Led a 2-person Android team to build the app from scratch with production-ready architecture.",
+      "Implemented navigation, modular structure, and real-time updates using Jetpack components.",
+      "Integrated Firebase Analytics and Crashlytics for event tracking and error reporting.",
+      "Worked closely with UI/UX designers to ensure pixel-perfect designs and performance consistency.",
+      "Wrote and maintained extensive unit test coverage for core modules."
+    ],
+    "tech": [
+      "Kotlin",
+      "MVVM",
+      "Dagger Hilt",
+      "Clean Architecture",
+      "Jetpack Navigation",
+      "Data Binding",
+      "Kotlin DSL",
+      "Coroutines",
+      "Modular Architecture",
+      "Firebase Analytics",
+      "Crashlytics",
+      "Unit Testing"
+    ],
     "team_size": 2,
     "link": "https://play.google.com/store/apps/details?id=com.ril.tira"
   },
   {
     "name": "Fynd Store OS",
+    "name_link": "[Fynd Store OS](https://apps.apple.com/ae/app/fynd-store-os/id6471659208)",
     "company": "Fynd",
     "description": "A retail-first Android solution that modernizes store operations including inventory, customer checkouts, and BLE-based scanner integrations.",
-    "tech": ["Kotlin", "Jetpack Compose", "BLE", "Dagger Hilt", "MVVM", "Hilt Navigation Compose", "Modular Architecture", "Coroutines", "WorkManager", "LiveData/Flow", "Compose Material 3", "Firebase"],
+    "responsibilities": [
+      "Led a 2-person team and collaborated with hardware teams for BLE scanner integration.",
+      "Developed key modules in Jetpack Compose for responsive UI and improved scalability.",
+      "Designed modular code architecture enabling efficient feature toggling and maintenance.",
+      "Integrated Firebase and Jetpack libraries for background tasks and user interaction handling.",
+      "Ensured high availability with WorkManager and local persistence using Room."
+    ],
+    "tech": [
+      "Kotlin",
+      "Jetpack Compose",
+      "BLE",
+      "Dagger Hilt",
+      "MVVM",
+      "Hilt Navigation Compose",
+      "Modular Architecture",
+      "Coroutines",
+      "WorkManager",
+      "LiveData/Flow",
+      "Compose Material 3",
+      "Firebase"
+    ],
     "team_size": 2,
     "link": "https://apps.apple.com/ae/app/fynd-store-os/id6471659208"
   },
   {
     "name": "Pixelbin Suite",
+    "name_link": "[Pixelbin Suite](https://play.google.com/store/apps/details?id=com.pixelbin.upscale.media)",
     "company": "Fynd",
     "description": "Suite of AI-powered image-processing apps including watermark remover, image upscaler, and format converter, built using Flutter for seamless cross-platform deployment.",
-    "tech": ["Flutter", "Dio", "Provider", "GetIt (Service Locator)", "MVVM", "Modular Design", "Camera Access", "Image Processing APIs", "File Picker", "Firebase Crashlytics", "Flutter Web Integration"],
+    "responsibilities": [
+      "Led a team of 4 Flutter developers to design and deliver 5 production-grade apps.",
+      "Implemented MVVM structure with GetIt for scalable dependency injection.",
+      "Integrated camera/image-processing APIs with local file handling and compression.",
+      "Used Flutter WebView and platform-specific code to support both Android and iOS builds.",
+      "Managed CI/CD pipelines and monitored app stability using Firebase Crashlytics."
+    ],
+    "tech": [
+      "Flutter",
+      "Dio",
+      "Provider",
+      "GetIt (Service Locator)",
+      "MVVM",
+      "Modular Design",
+      "Camera Access",
+      "Image Processing APIs",
+      "File Picker",
+      "Firebase Crashlytics",
+      "Flutter Web Integration"
+    ],
     "team_size": 4,
     "links": [
       "https://play.google.com/store/apps/details?id=com.pixelbin.upscale.media",
@@ -39,15 +122,57 @@
   },
   {
     "name": "SwapEasy Diagnostic",
+    "name_link": "[SwapEasy Diagnostic](https://play.google.com/store/apps/details?id=com.diagnosticsse)",
+    "company": "Fynd",
     "description": "A smart diagnostic app for evaluating device condition before resale, built using React Native with access to low-level sensors and device APIs.",
-    "tech": ["React Native", "TypeScript", "Redux Toolkit", "Jest", "Expo", "Native Modules", "Permission Handling", "Device Sensors Integration", "BLE (via React Native BLE PLX)"],
+    "responsibilities": [
+      "Sole developer for the diagnostic app built in React Native.",
+      "Implemented device hardware diagnostics using BLE, GPS, camera, and sensor APIs.",
+      "Handled permission workflows and platform-specific capabilities via native modules.",
+      "Created modular test flow configuration with Redux Toolkit for flexibility.",
+      "Integrated device condition scoring and reporting engine."
+    ],
+    "tech": [
+      "React Native",
+      "TypeScript",
+      "Redux Toolkit",
+      "Jest",
+      "Expo",
+      "Native Modules",
+      "Permission Handling",
+      "Device Sensors Integration",
+      "BLE (via React Native BLE PLX)"
+    ],
     "team_size": 1,
     "link": "https://play.google.com/store/apps/details?id=com.diagnosticsse"
   },
   {
     "name": "Copilot SDK",
+    "name_link": "[Copilot SDK](https://github.com/CopilotLive/sdk-android-examples)",
+    "company": "Fynd",
     "description": "AI integration SDK enabling tool-triggering in mobile apps via LLMs. Includes socket-based real-time backend, dynamic UI action mapping, and plugin-based architecture.",
-    "tech": ["Kotlin", "Dagger Hilt", "MVVM", "Modular SDK Design", "WebSockets", "Node.js", "JavaScript", "LLMs (GPT)", "EventBus", "CoroutineScope", "OkHttp", "Firebase Remote Config", "SDK Documentation Tools (Docusaurus)"],
+    "responsibilities": [
+      "Led 2-person team for Android SDK development for LLM-integrated Copilot agents.",
+      "Implemented dynamic action dispatching and tool linking using WebSockets and custom protocols.",
+      "Built modular SDK structure using MVVM and Kotlin DSL to ensure flexibility.",
+      "Developed Node.js backend hooks for action feedback and frontend trigger validation.",
+      "Contributed to official documentation, examples, and developer onboarding guides."
+    ],
+    "tech": [
+      "Kotlin",
+      "Dagger Hilt",
+      "MVVM",
+      "Modular SDK Design",
+      "WebSockets",
+      "Node.js",
+      "JavaScript",
+      "LLMs (GPT)",
+      "EventBus",
+      "CoroutineScope",
+      "OkHttp",
+      "Firebase Remote Config",
+      "SDK Documentation Tools (Docusaurus)"
+    ],
     "team_size": 2,
     "links": [
       "https://github.com/CopilotLive/sdk-android-examples",
@@ -56,32 +181,102 @@
   },
   {
     "name": "Companion App",
-    "company": "OLA Electric",
+    "name_link": "[Companion App](https://play.google.com/store/apps/details?id=com.olaelectric.companion)",
+    "company": "Ola Electric",
     "description": "Feature-rich companion app for OLA scooters with Bluetooth integration for Proximity Unlock, Music Sync (Party Mode), and document uploads.",
-    "tech": ["Kotlin", "Jetpack Compose", "BLE", "Koin", "MVVM", "Navigation Component", "Hilt WorkManager", "Motion Layout", "Jetpack Security", "CI/CD via Bitrise", "Unit/UI Testing (Espresso)"],
+    "responsibilities": [
+      "Built and maintained Party Mode, Proximity Unlock, and Document Upload features.",
+      "Integrated Bluetooth and BLE for seamless phone-scooter communication.",
+      "Applied modern architectural patterns (MVVM + Koin + Clean Architecture).",
+      "Worked with cross-functional teams to deliver consumer-grade reliability."
+    ],
+    "tech": [
+      "Kotlin",
+      "Jetpack Compose",
+      "BLE",
+      "Koin",
+      "MVVM",
+      "Navigation Component",
+      "Hilt WorkManager",
+      "Motion Layout",
+      "Jetpack Security",
+      "CI/CD via Bitrise",
+      "Unit/UI Testing (Espresso)"
+    ],
     "team_size": 1,
     "link": "https://play.google.com/store/apps/details?id=com.olaelectric.companion"
   },
   {
-    "name": "Probo",
+    "name": "Probo App",
+    "name_link": "[Probo App](https://play.google.com/store/apps/details?id=com.proboapk.newproboyesno)",
     "company": "Primathon",
     "description": "A fast-growing opinion trading app where users trade on predictions via Yes/No-based real-time polls with dynamic data updates.",
-    "tech": ["Kotlin", "Jetpack Compose", "Koin", "MVVM", "Retrofit", "Socket.IO", "Clean Architecture", "Firebase Messaging", "Jetpack Paging", "Coil"],
+    "responsibilities": [
+      "Led 3-member Android team and built app from scratch.",
+      "Implemented architecture using Jetpack Compose, Koin, and MVVM.",
+      "Integrated real-time sockets and poll result tracking.",
+      "Collaborated with design and backend to ship features quickly and reliably."
+    ],
+    "tech": [
+      "Kotlin",
+      "Jetpack Compose",
+      "Koin",
+      "MVVM",
+      "Retrofit",
+      "Socket.IO",
+      "Clean Architecture",
+      "Firebase Messaging",
+      "Jetpack Paging",
+      "Coil"
+    ],
     "team_size": 3,
     "link": "https://play.google.com/store/apps/details?id=com.proboapk.newproboyesno"
   },
   {
-    "name": "Emma Sleep",
-    "company": "Applaunch",
-    "description": "An app for Germany’s leading mattress brand offering sleep tracking, product info, and in-app support for orders and delivery updates.",
-    "tech": ["Kotlin", "Dagger 2", "MVVM", "Data Binding", "Multi-module", "Navigation Graph", "Room", "Retrofit", "ViewPager2", "BLE Integration"],
-    "team_size": 1
+    "name": "Emma Sleep App",
+    "name_link": "[Emma Sleep App](https://play.google.com/store/apps/dev?id=6604476478331267661)",
+    "company": "Applaunch.io",
+    "description": "An app for Germany\u2019s leading mattress brand offering sleep tracking, product info, and in-app support for orders and delivery updates.",
+    "responsibilities": [
+      "Developed and maintained the Emma Sleep Android app with BLE and Dagger 2.",
+      "Integrated APIs for product listing, checkout, and order tracking.",
+      "Implemented MVVM with multi-module design and clean architecture."
+    ],
+    "tech": [
+      "Kotlin",
+      "Dagger 2",
+      "MVVM",
+      "Data Binding",
+      "Multi-module",
+      "Navigation Graph",
+      "Room",
+      "Retrofit",
+      "ViewPager2",
+      "BLE Integration"
+    ],
+    "team_size": 1,
+    "link": "https://play.google.com/store/apps/dev?id=6604476478331267661"
   },
   {
-    "name": "SchoolMitra",
+    "name": "SchoolMitra App",
+    "name_link": "[SchoolMitra App](https://play.google.com/store/apps/details?id=org.school.mitra)",
     "company": "SchoolMitra",
-    "description": "A school-parent communication platform offering attendance, homework tracking, fee updates, and performance insights—all via one app.",
-    "tech": ["Kotlin", "Dagger 2", "MVVM", "Data Binding", "BLE", "Room", "Firebase Push Notifications", "Multi-module Architecture"],
+    "description": "A school-parent communication platform offering attendance, homework tracking, fee updates, and performance insights\u2014all via one app.",
+    "responsibilities": [
+      "Revamped the entire SchoolMitra Android app using modern design principles.",
+      "Implemented modules for attendance, assignments, fees, and push notifications.",
+      "Handled QA, testing, release management, and feature rollout."
+    ],
+    "tech": [
+      "Kotlin",
+      "Dagger 2",
+      "MVVM",
+      "Data Binding",
+      "BLE",
+      "Room",
+      "Firebase Push Notifications",
+      "Multi-module Architecture"
+    ],
     "team_size": 1,
     "link": "https://play.google.com/store/apps/details?id=org.school.mitra"
   }

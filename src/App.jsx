@@ -1,22 +1,28 @@
-import React from "react";
-import { Container } from "@mui/material";
-import Experience from './components/Experience';
+import React from 'react';
+import { Container } from '@mui/material';
+import Profile from './components/Profile';
 import About from './components/About';
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Education from "./components/Education";
-import Contact from "./components/Contact";
-import Profile from "./components/Profile";
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Skills from './components/Skills';
+import Education from './components/Education';
+import Contact from './components/Contact';
+import DownloadResume from './components/DownloadResume';
 
-export default function App() {
+const App = () => {
   return (
-    <Container maxWidth="md" sx={{ py: { xs: 2, sm: 4 } }}>
-      <Profile/>
-      <About/>
-      <Experience />
-      <Skills/>
-      <Projects/>
-      <Education/>
-    </Container>
+    //<DownloadResume>
+      <Container maxWidth="lg" sx={{ py: 4 }}>
+        <Profile />
+        <About />
+        <Experience />
+        <Projects />
+        <Skills />
+        <Education />
+        <Contact />
+      </Container>
+    //</DownloadResume>
   );
-}
+};
+
+export default App;
