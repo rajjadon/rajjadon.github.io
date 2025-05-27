@@ -8,7 +8,14 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    sourcemap: true
+    sourcemap: true,
+    rollupOptions: {
+      output: {
+        format: 'es',
+        chunkFileNames: '[name]-[hash].js',
+        entryFileNames: '[name]-[hash].js'
+      }
+    }
   },
   optimizeDeps: {
     include: ['react', 'react-dom']
