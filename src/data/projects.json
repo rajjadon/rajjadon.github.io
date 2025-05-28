@@ -1,5 +1,38 @@
 [
   {
+    "name": "Copilot SDK",
+    "name_link": "[Copilot SDK](https://docs.copilot.live/deployments/mobile/android-sdk/)",
+    "company": "Fynd",
+    "description": "AI integration SDK enabling tool-triggering in mobile apps via LLMs. Includes socket-based real-time backend, dynamic UI action mapping, and plugin-based architecture.",
+    "responsibilities": [
+      "Led 2-person team for Android SDK development for LLM-integrated Copilot agents.",
+      "Implemented dynamic action dispatching and tool linking using WebSockets and custom protocols.",
+      "Built modular SDK structure using MVVM and Kotlin DSL to ensure flexibility.",
+      "Developed Node.js backend hooks for action feedback and frontend trigger validation.",
+      "Contributed to official documentation, examples, and developer onboarding guides."
+    ],
+    "tech": [
+      "Kotlin",
+      "Dagger Hilt",
+      "MVVM",
+      "Modular SDK Design",
+      "WebSockets",
+      "Node.js",
+      "JavaScript",
+      "LLMs (GPT)",
+      "EventBus",
+      "CoroutineScope",
+      "OkHttp",
+      "Firebase Remote Config",
+      "SDK Documentation Tools (Docusaurus)"
+    ],
+    "team_size": 2,
+    "links": [
+      "https://github.com/CopilotLive/sdk-android-examples",
+      "https://docs.copilot.live/ai-actions/client/"
+    ]
+  },
+  {
     "name": "Metro Wholesale",
     "name_link": "[Metro Wholesale](https://play.google.com/store/apps/details?id=in.co.metro.customerappmetro)",
     "company": "Fynd",
@@ -145,39 +178,6 @@
     ],
     "team_size": 1,
     "link": "https://play.google.com/store/apps/details?id=com.diagnosticsse"
-  },
-  {
-    "name": "Copilot SDK",
-    "name_link": "[Copilot SDK](https://github.com/CopilotLive/sdk-android-examples)",
-    "company": "Fynd",
-    "description": "AI integration SDK enabling tool-triggering in mobile apps via LLMs. Includes socket-based real-time backend, dynamic UI action mapping, and plugin-based architecture.",
-    "responsibilities": [
-      "Led 2-person team for Android SDK development for LLM-integrated Copilot agents.",
-      "Implemented dynamic action dispatching and tool linking using WebSockets and custom protocols.",
-      "Built modular SDK structure using MVVM and Kotlin DSL to ensure flexibility.",
-      "Developed Node.js backend hooks for action feedback and frontend trigger validation.",
-      "Contributed to official documentation, examples, and developer onboarding guides."
-    ],
-    "tech": [
-      "Kotlin",
-      "Dagger Hilt",
-      "MVVM",
-      "Modular SDK Design",
-      "WebSockets",
-      "Node.js",
-      "JavaScript",
-      "LLMs (GPT)",
-      "EventBus",
-      "CoroutineScope",
-      "OkHttp",
-      "Firebase Remote Config",
-      "SDK Documentation Tools (Docusaurus)"
-    ],
-    "team_size": 2,
-    "links": [
-      "https://github.com/CopilotLive/sdk-android-examples",
-      "https://docs.copilot.live/ai-actions/client/"
-    ]
   },
   {
     "name": "Companion App",
