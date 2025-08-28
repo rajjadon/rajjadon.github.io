@@ -28,6 +28,8 @@ jobs:
 
       - name: Build
         run: yarn build
+        env:
+          VITE_COPILOT_TOKEN: ${{ secrets.VITE_COPILOT_TOKEN }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
