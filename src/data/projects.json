@@ -37,29 +37,6 @@
     "name": "Metro Wholesale",
     "name_link": "[Metro Wholesale](https://play.google.com/store/apps/details?id=in.co.metro.customerappmetro)",
     "company": "Fynd",
-    "description": "India's leading B2B wholesale platform offering 24/7 access to a wide range of high-quality products for Kirana stores, restaurants, and SMEs.",
-    "responsibilities": [
-      "Independently developed Android PWA app for Horeca and Institution sectors.",
-      "Designed scalable architecture (MVVM + Clean Architecture).",
-      "Optimized dependency injection and coroutines for performance.",
-      "Maintained API reliability with DataStore + Room."
-    ],
-    "tech": [
-      "Kotlin",
-      "Dagger Hilt",
-      "MVVM",
-      "Clean Architecture",
-      "Jetpack Libraries",
-      "Retrofit",
-      "Room"
-    ],
-    "team_size": 1,
-    "link": "https://play.google.com/store/apps/details?id=in.co.metro.customerappmetro"
-  },
-  {
-    "name": "Metro Wholesale",
-    "name_link": "[Metro Wholesale](https://play.google.com/store/apps/details?id=in.co.metro.customerappmetro)",
-    "company": "Fynd",
     "description": "India's leading B2B wholesale platform offering round-the-clock access to a wide range of high-quality products at wholesale prices for Kirana stores, restaurants, and SMEs.",
     "responsibilities": [
       "Independently led the Android PWA app development for Horeca and Institution sectors.",
