@@ -1,36 +1,60 @@
 [
   {
-    "name": "Copilot SDK",
+    "name": "Copilot SDK + AI Agent Features",
     "name_link": "[Copilot SDK](https://docs.copilot.live/deployments/mobile/android-sdk/)",
     "company": "Fynd",
-    "description": "AI integration SDK enabling tool-triggering in mobile apps via LLMs. Includes socket-based real-time backend, dynamic UI action mapping, and plugin-based architecture.",
+    "description": "LLM-powered SDK and platform enabling tool-triggering, context sync, and multimodal AI agents (voice/video).",
     "responsibilities": [
-      "Led 2-person team for Android SDK development for LLM-integrated Copilot agents.",
-      "Implemented dynamic action dispatching and tool linking using WebSockets and custom protocols.",
-      "Built modular SDK structure using MVVM and Kotlin DSL to ensure flexibility.",
-      "Developed Node.js backend hooks for action feedback and frontend trigger validation.",
-      "Contributed to official documentation, examples, and developer onboarding guides."
+      "Built dynamic tool calling system to let LLMs trigger frontend actions in real time.",
+      "Implemented context state updates so the LLM is always aware of app/frontend state.",
+      "Developed AI video call feature with LLM response streaming into video avatars.",
+      "Currently building AI voice call SDK (Go + JS) with low-latency STT and TTS pipelines.",
+      "Led Android SDK design for Copilot agents, ensuring modular, developer-friendly integration.",
+      "Wrote official documentation, code examples, and developer onboarding materials."
     ],
     "tech": [
       "Kotlin",
-      "Dagger Hilt",
-      "MVVM",
-      "Modular SDK Design",
-      "WebSockets",
       "Node.js",
-      "JavaScript",
+      "React.js",
+      "Go",
+      "WebSockets",
+      "WebRTC",
       "LLMs (GPT)",
-      "EventBus",
-      "CoroutineScope",
-      "OkHttp",
-      "Firebase Remote Config",
-      "SDK Documentation Tools (Docusaurus)"
+      "STT (Whisper/Deepgram)",
+      "TTS (ElevenLabs/Google)",
+      "Modular SDK Design",
+      "MVVM",
+      "Dagger Hilt",
+      "Firebase Remote Config"
     ],
     "team_size": 2,
     "links": [
       "https://github.com/CopilotLive/sdk-android-examples",
       "https://docs.copilot.live/ai-actions/client/"
     ]
+  },
+  {
+    "name": "Metro Wholesale",
+    "name_link": "[Metro Wholesale](https://play.google.com/store/apps/details?id=in.co.metro.customerappmetro)",
+    "company": "Fynd",
+    "description": "India's leading B2B wholesale platform offering 24/7 access to a wide range of high-quality products for Kirana stores, restaurants, and SMEs.",
+    "responsibilities": [
+      "Independently developed Android PWA app for Horeca and Institution sectors.",
+      "Designed scalable architecture (MVVM + Clean Architecture).",
+      "Optimized dependency injection and coroutines for performance.",
+      "Maintained API reliability with DataStore + Room."
+    ],
+    "tech": [
+      "Kotlin",
+      "Dagger Hilt",
+      "MVVM",
+      "Clean Architecture",
+      "Jetpack Libraries",
+      "Retrofit",
+      "Room"
+    ],
+    "team_size": 1,
+    "link": "https://play.google.com/store/apps/details?id=in.co.metro.customerappmetro"
   },
   {
     "name": "Metro Wholesale",

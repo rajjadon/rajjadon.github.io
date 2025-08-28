@@ -1,16 +1,18 @@
 [
   {
-    "title": "SDE - 2",
+    "title": "SDE - 2 | AI & Mobile Engineer",
     "company": "Fynd (Shopsense Retail Technologies Ltd.)",
     "location": "Bengaluru",
     "range": "Oct 2022 — Present",
     "responsibilities": [
-      "Led development of key projects including Metro Wholesale, Tira Beauty, Fynd Store OS, Pixelbin Suite, and Copilot SDK.",
-      "Architected Android and Flutter applications using MVVM, Clean Architecture, multi-module structure, and SOLID principles.",
-      "Implemented advanced features such as BLE integration, modular SDKs, image processing, and LLM-powered AI actions.",
-      "Collaborated with cross-functional teams across backend, design, and product to ensure timely delivery and feature alignment.",
-      "Mentored junior developers, conducted thorough code reviews, and enforced best practices in performance, testing, and maintainability.",
-      "Integrated Firebase (Crashlytics, Analytics, Remote Config), WebSockets, and CI/CD pipelines for production-grade delivery."
+      "Led development of key projects including Metro Wholesale, Tira Beauty, Fynd Store OS, Pixelbin Suite, SwapEasy Diagnostic, and Copilot SDK.",
+      "Transitioned from mobile app development (Android, Flutter, React Native) into AI engineering for Fynd Copilot.",
+      "Built LLM-powered features: dynamic tool calling, context-aware agents, AI video calls, and ongoing AI voice call SDK with STT/TTS.",
+      "Architected frontend automation workflows using Node.js, React, and WebSockets to bridge LLMs with app state.",
+      "Implemented production-grade mobile apps with MVVM, Clean Architecture, and multi-module setups.",
+      "Collaborated with backend, design, and product teams to ship cross-platform solutions with high reliability.",
+      "Mentored junior developers and enforced best practices in architecture, scalability, and performance.",
+      "Integrated Firebase (Crashlytics, Analytics, Remote Config), CI/CD pipelines, and socket-based event systems for robust delivery."
     ]
   },
   {
@@ -19,10 +21,10 @@
     "location": "Bengaluru",
     "range": "June 2022 — Sep 2022",
     "responsibilities": [
-      "Built and maintained features like Party Mode, Proximity Unlock, and Document Upload in the Ola Companion app.",
-      "Used Jetpack Compose, BLE, and WorkManager to deliver seamless user-device interaction.",
-      "Applied modern architectural patterns (MVVM + Koin + Clean Architecture) with multi-module project setup.",
-      "Worked closely with QA and product to ensure performance, user experience, and hardware compatibility."
+      "Built features like Party Mode, Proximity Unlock, and Document Upload in the Ola Companion app.",
+      "Used Jetpack Compose, BLE, and WorkManager for seamless phone-scooter integration.",
+      "Applied MVVM, Clean Architecture, and Koin in a multi-module project setup.",
+      "Collaborated with QA and hardware teams to ensure performance and reliability."
     ]
   },
   {
@@ -31,10 +33,10 @@
     "location": "Gurgaon",
     "range": "Dec 2021 — May 2022",
     "responsibilities": [
-      "Led a 3-member Android team to develop the Probo app from scratch using Kotlin, Compose, and Koin.",
-      "Designed and implemented clean, scalable architecture with real-time Socket.IO support.",
-      "Coordinated with product and backend teams to deliver critical features with real-time polling logic.",
-      "Owned feature testing, build releases, and code quality enforcement."
+      "Led a 3-member Android team to develop the Probo app from scratch using Kotlin and Jetpack Compose.",
+      "Designed clean, scalable architecture with real-time socket-based polling logic.",
+      "Coordinated with product and backend to deliver high-traffic features with low-latency updates.",
+      "Owned releases, QA workflows, and CI/CD."
     ]
   },
   {
@@ -43,9 +45,9 @@
     "location": "Bengaluru",
     "range": "Nov 2020 — Dec 2021",
     "responsibilities": [
-      "Developed the Emma Sleep app for a German client using Dagger 2, BLE, and MVVM architecture.",
-      "Handled full-cycle development from screen implementation to integration with logistics APIs.",
-      "Worked in an agile environment and contributed to architectural planning and refactoring."
+      "Developed the Emma Sleep app for a German client using Dagger 2, BLE, and MVVM.",
+      "Handled end-to-end development including API integrations, checkout flows, and logistics.",
+      "Worked in Agile sprints and contributed to architectural refactors."
     ]
   },
   {
@@ -55,8 +57,8 @@
     "range": "Jan 2019 — Nov 2020",
     "responsibilities": [
       "Independently revamped the SchoolMitra Android app with modern architecture and design principles.",
-      "Implemented student attendance, homework tracking, and school notification modules.",
-      "Led QA testing, bug fixing, and Play Store deployment across multiple product updates."
+      "Implemented core modules: student attendance, homework tracking, notifications, and fee updates.",
+      "Handled QA, bug fixing, Play Store deployment, and release cycles."
     ]
   }
 ]

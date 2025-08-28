@@ -1,8 +1,37 @@
 {
-  "languages": ["Kotlin", "JavaScript", "Node.js"],
+  "languages": ["Kotlin", "Java", "JavaScript", "TypeScript", "Node.js", "Go"],
   "mobile": ["Android (Jetpack Compose, XML)", "Flutter", "React Native"],
-  "architecture": ["MVVM", "Clean Architecture", "Multi-module", "SOLID principles"],
-  "tools": ["Dagger Hilt", "Koin", "BLE", "Firebase", "Coroutines", "Navigation Component", "Data Binding", "Jetpack Libraries"],
+  "architecture": [
+    "MVVM",
+    "Clean Architecture",
+    "Multi-module",
+    "SOLID Principles",
+    "SDK Development",
+    "Real-time Systems"
+  ],
+  "tools": [
+    "Dagger Hilt",
+    "Koin",
+    "BLE",
+    "Firebase",
+    "Coroutines",
+    "Navigation Component",
+    "Data Binding",
+    "Jetpack Libraries",
+    "Redux Toolkit",
+    "Socket.IO",
+    "WebRTC"
+  ],
   "devOps": ["CI/CD", "Crashlytics", "GitHub"],
-  "ai": ["LLM Integration", "WebSockets", "Dynamic Tool Actions"]
+  "ai": [
+    "LLM Integration",
+    "WebSockets",
+    "Dynamic Tool Calling",
+    "Context-Aware Agents",
+    "AI Video Calls",
+    "AI Voice Calls (STT + TTS)",
+    "Realtime Transcription",
+    "TTS Engines",
+    "LLM Orchestration"
+  ]
 }
