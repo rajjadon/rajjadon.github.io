@@ -3,13 +3,11 @@
   <b>Android Engineer | Cross-platform Developer | LLM Integrator</b><br/>
   Building mobile apps, SDKs, and AI interfaces with a strong sense of architecture and UX polish.
 </p>
-
 <p align="center">
   <a href="https://rajjadon.github.io" target="_blank">
     <img src="https://img.shields.io/badge/Visit Portfolio-3b82f6?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio Badge"/>
   </a>
 </p>
-
 ---
 
 ## 📌 About This Repository
