@@ -59,6 +59,7 @@ const Profile = () => {
           variant="contained"
           href={profile.resumeLink}
           target="_blank"
+          rel="noopener noreferrer"
           startIcon={<DownloadIcon />}
           sx={{
             mb: 3,
@@ -84,7 +85,7 @@ const Profile = () => {
             </IconButton>
           </Tooltip>
           <Tooltip title="Chat on WhatsApp">
-            <IconButton href={profile.whatsapp} target="_blank" color="primary">
+            <IconButton href={profile.whatsapp} target="_blank" rel="noopener noreferrer" color="primary">
               <WhatsAppIcon fontSize="large" />
             </IconButton>
           </Tooltip>
@@ -94,12 +95,12 @@ const Profile = () => {
             </IconButton>
           </Tooltip>
           <Tooltip title="View GitHub Profile">
-            <IconButton href={profile.github} target="_blank" color="primary">
+            <IconButton href={profile.github} target="_blank" rel="noopener noreferrer" color="primary">
               <GitHubIcon fontSize="large" />
             </IconButton>
           </Tooltip>
           <Tooltip title="View LinkedIn Profile">
-            <IconButton href={profile.linkedin} target="_blank" color="primary">
+            <IconButton href={profile.linkedin} target="_blank" rel="noopener noreferrer" color="primary">
               <LinkedInIcon fontSize="large" />
             </IconButton>
           </Tooltip>

@@ -64,7 +64,7 @@ const Contact = () => (
             <Link 
               href={`https://wa.me/${contact.phone.replace(/[^0-9]/g, '')}`}
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               sx={{ 
                 color: 'white',
                 textDecoration: 'none',
@@ -98,7 +98,7 @@ const Contact = () => (
             <Link 
               href={contact.linkedin}
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               sx={{ 
                 color: 'white',
                 textDecoration: 'none',
@@ -116,7 +116,7 @@ const Contact = () => (
             <Link 
               href={contact.github}
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               sx={{ 
                 color: 'white',
                 textDecoration: 'none',
