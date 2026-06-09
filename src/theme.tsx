@@ -36,9 +36,9 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           backgroundImage: "none",
-          // Glassy translucent surface so card edges blend with the gradient bg
-          backgroundColor: "rgba(30,41,59,0.55)",
-          border: "1px solid rgba(148,163,184,0.10)",
+          // Opaque enough to read clearly, soft border so edges blend (no harsh line)
+          backgroundColor: "rgba(30,41,59,0.92)",
+          border: "1px solid rgba(148,163,184,0.12)",
           backdropFilter: "blur(10px)",
           WebkitBackdropFilter: "blur(10px)",
         },
