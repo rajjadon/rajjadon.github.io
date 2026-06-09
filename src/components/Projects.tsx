@@ -1,225 +1,172 @@
 import React from 'react';
-import { Typography, Box, Chip, Link, Stack, Paper } from '@mui/material';
+import { Typography, Box, Chip, Link, Paper, Grid } from '@mui/material';
 import { motion } from 'framer-motion';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import projectsData from '../data/projects.json';
 
-const Projects = () => {
-  const extractUrlFromMarkdown = (markdownLink) => {
-    const match = markdownLink.match(/\[.*?\]\((.*?)\)/);
-    return match ? match[1] : markdownLink;
-  };
+const extractUrl = (markdownLink: string) => {
+  const match = markdownLink.match(/\[.*?\]\((.*?)\)/);
+  return match ? match[1] : markdownLink;
+};
 
-  return (
-    <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9 }}>
-      <Typography 
-        variant="h2" 
-        component="h2"
-        sx={{ 
-          fontSize: { xs: '2rem', sm: '3rem' },
-          fontWeight: 700,
-          mb: 4,
-          color: 'white'
-        }}
-      >
-        Projects
+const getLinkLabel = (project: typeof projectsData[number], link: string, i: number) => {
+  if (project.name === 'Copilot SDK + AI Agent Features') {
+    if (link.includes('github.com')) return 'GitHub';
+    if (link.includes('docs.copilot.live')) return 'Docs';
+  }
+  if (project.name === 'Pixelbin Suite') {
+    if (link.includes('upscale.media')) return 'Upscale.media';
+    if (link.includes('watermarkremover.io')) return 'Watermarkremover.io';
+    if (link.includes('erase.bg')) return 'Erase.bg';
+    if (link.includes('shrink.media')) return 'Shrink.media';
+    if (link.includes('convertfiles.ai')) return 'ConvertFiles.ai';
+  }
+  return `Link ${i + 1}`;
+};
+
+const Projects = () => (
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6 }}
+  >
+    <Box id="projects" sx={{ mb: 8 }}>
+      <Typography variant="h4" sx={{ mb: 1 }}>Projects</Typography>
+      <Typography variant="body2" color="text.secondary" sx={{ mb: 4 }}>
+        Apps and platforms I've built or led
       </Typography>
-      <Paper elevation={4} sx={{ p: 3, mb: 5, borderRadius: 4, bgcolor: "background.paper" }}>
-        <Stack spacing={3}>
-          {projectsData.map((project, index) => (
-            <motion.div
-              key={project.name}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <Box
-                sx={{
-                  bgcolor: '#2d2d2d',
-                  borderRadius: 3,
-                  p: 3,
-                  transition: 'transform 0.2s ease-in-out',
-                  '&:hover': {
-                    transform: 'translateY(-4px)'
-                  }
-                }}
+
+      <Grid container spacing={3}>
+        {projectsData.map((project, index) => {
+          const projectUrl = project.name_link ? extractUrl(project.name_link) : null;
+          const links = project.links ?? (project.link ? [project.link] : []);
+
+          return (
+            <Grid item xs={12} md={6} key={project.name}>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: (index % 2) * 0.1 }}
+                style={{ height: "100%" }}
               >
-                {/* Title and Company */}
-                <Box sx={{ mb: 1 }}>
+                <Paper
+                  elevation={0}
+                  sx={{
+                    p: 3,
+                    borderRadius: 3,
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    transition: "transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease",
+                    "&:hover": {
+                      transform: "translateY(-4px)",
+                      boxShadow: "0 8px 32px rgba(99,102,241,0.15)",
+                      borderColor: "#6366f1",
+                    },
+                  }}
+                >
+                  {/* Header */}
+                  <Box sx={{ mb: 1.5 }}>
+                    <Box sx={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 1 }}>
+                      <Typography
+                        variant="h6"
+                        component={projectUrl ? Link : "h6"}
+                        href={projectUrl ?? undefined}
+                        target={projectUrl ? "_blank" : undefined}
+                        rel={projectUrl ? "noopener noreferrer" : undefined}
+                        sx={{
+                          fontWeight: 700,
+                          color: "text.primary",
+                          textDecoration: "none",
+                          "&:hover": { color: "primary.main" },
+                          lineHeight: 1.3,
+                        }}
+                      >
+                        {project.name}
+                        {projectUrl && (
+                          <OpenInNewIcon sx={{ fontSize: 14, ml: 0.5, verticalAlign: "middle", opacity: 0.6 }} />
+                        )}
+                      </Typography>
+                    </Box>
+                    {project.company && (
+                      <Chip
+                        label={project.company}
+                        size="small"
+                        sx={{
+                          mt: 0.5,
+                          bgcolor: "rgba(99,102,241,0.1)",
+                          color: "primary.main",
+                          border: "1px solid rgba(99,102,241,0.25)",
+                          fontSize: "0.7rem",
+                          height: 20,
+                        }}
+                      />
+                    )}
+                  </Box>
+
+                  {/* Description */}
                   <Typography
-                    variant="h5"
-                    component={project.name_link ? Link : 'h5'}
-                    href={project.name_link ? extractUrlFromMarkdown(project.name_link) : undefined}
-                    target={project.name_link ? '_blank' : undefined}
-                    rel={project.name_link ? 'noopener' : undefined}
-                    sx={{ 
-                      fontWeight: 600,
-                      color: '#3b82f6',
-                      mb: 0.5,
-                      textDecoration: 'none',
-                      '&:hover': {
-                        textDecoration: project.name_link ? 'underline' : 'none'
-                      }
-                    }}
+                    variant="body2"
+                    color="text.secondary"
+                    sx={{ mb: 2, lineHeight: 1.7, flex: 1 }}
                   >
-                    {project.name}
-                    {project.name_link && <OpenInNewIcon sx={{ fontSize: 16, ml: 0.5 }} />}
+                    {project.description}
                   </Typography>
-                  {project.company && (
-                    <Typography
-                      variant="subtitle1"
-                      sx={{ 
-                        color: '#94a3b8',
-                        mb: 1
-                      }}
-                    >
-                      {project.company}
-                    </Typography>
-                  )}
-                </Box>
 
-                {/* Links Row with Wrap */}
-                {project.links && project.links.length > 0 && (
-                  <Stack
-                    direction="row"
-                    spacing={2}
-                    flexWrap="wrap"
-                    useFlexGap
-                    sx={{ mb: 2 }}
-                  >
-                    {project.links.map((link, i) => {
-                      let appName = '';
-                      
-                      // For Pixelbin Suite apps
-                      if (project.name === 'Pixelbin Suite') {
-                        if (link.includes('upscale.media')) appName = 'Upscale.media';
-                        else if (link.includes('watermarkremover.io')) appName = 'Watermarkremover.io';
-                        else if (link.includes('erase.bg')) appName = 'Erase.bg';
-                        else if (link.includes('shrink.media')) appName = 'Shrink.media';
-                        else if (link.includes('convertfiles.ai')) appName = 'ConvertFiles.ai';
-                      }
-                      // For Copilot SDK
-                      else if (project.name === 'Copilot SDK') {
-                        if (link.includes('github.com')) appName = 'GitHub Repository';
-                        else if (link.includes('docs.copilot.live')) appName = 'Documentation';
-                      }
-                      // Fallback for any other projects with multiple links
-                      else {
-                        appName = `Link ${i + 1}`;
-                      }
-
-                      return (
+                  {/* Extra links (multi-link projects) */}
+                  {links.length > 1 && (
+                    <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1, mb: 2 }}>
+                      {links.map((link, i) => (
                         <Link
                           key={i}
                           href={link}
                           target="_blank"
-                          rel="noopener"
+                          rel="noopener noreferrer"
+                          underline="none"
                           sx={{
-                            color: '#3b82f6',
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            gap: 0.5,
-                            whiteSpace: 'nowrap',
-                            textDecoration: 'none',
-                            '&:hover': {
-                              textDecoration: 'underline'
-                            }
+                            fontSize: "0.75rem",
+                            color: "secondary.main",
+                            display: "inline-flex",
+                            alignItems: "center",
+                            gap: 0.25,
+                            "&:hover": { textDecoration: "underline" },
                           }}
                         >
-                          {appName} <OpenInNewIcon sx={{ fontSize: 16 }} />
+                          {getLinkLabel(project, link, i)}
+                          <OpenInNewIcon sx={{ fontSize: 12 }} />
                         </Link>
-                      );
-                    })}
-                  </Stack>
-                )}
-
-                {/* Description */}
-                <Typography
-                  variant="body1"
-                  sx={{ 
-                    color: '#e2e8f0',
-                    mb: 2,
-                    lineHeight: 1.6
-                  }}
-                >
-                  {project.description}
-                </Typography>
-
-                {/* Team Size */}
-                {project.team_size && (
-                  <Box sx={{ mb: 2 }}>
-                    <Typography
-                      variant="subtitle1"
-                      sx={{ 
-                        color: '#94a3b8',
-                        mb: 0.5
-                      }}
-                    >
-                      Team Size
-                    </Typography>
-                    <Typography
-                      variant="body1"
-                      sx={{ 
-                        color: '#e2e8f0',
-                        lineHeight: 1.6
-                      }}
-                    >
-                      {project.team_size} {project.team_size === 1 ? 'developer' : 'developers'}
-                    </Typography>
-                  </Box>
-                )}
-
-                {/* Responsibilities */}
-                {project.responsibilities && project.responsibilities.length > 0 && (
-                  <Box sx={{ mb: 2 }}>
-                    <Typography
-                      variant="subtitle1"
-                      sx={{ 
-                        color: '#94a3b8',
-                        mb: 0.5
-                      }}
-                    >
-                      Responsibilities
-                    </Typography>
-                    <Box component="ul" sx={{ 
-                      color: '#e2e8f0',
-                      pl: 2,
-                      m: 0,
-                      '& li': {
-                        mb: 0.5
-                      }
-                    }}>
-                      {project.responsibilities.map((responsibility, index) => (
-                        <li key={index}>{responsibility}</li>
                       ))}
                     </Box>
-                  </Box>
-                )}
+                  )}
 
-                {/* Tech Chips */}
-                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-                  {project.tech.map((tech) => (
-                    <Chip
-                      key={tech}
-                      label={tech}
-                      sx={{
-                        bgcolor: '#1e1e1e',
-                        color: '#94a3b8',
-                        fontWeight: 500,
-                        '&:hover': {
-                          bgcolor: '#3b3b3b'
-                        }
-                      }}
-                    />
-                  ))}
-                </Box>
-              </Box>
-            </motion.div>
-          ))}
-        </Stack>
-      </Paper>
-    </motion.div>
-  );
-};
+                  {/* Tech chips */}
+                  <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.75 }}>
+                    {project.tech.map((tech) => (
+                      <Chip
+                        key={tech}
+                        label={tech}
+                        size="small"
+                        sx={{
+                          bgcolor: "rgba(51,65,85,0.6)",
+                          color: "text.secondary",
+                          fontSize: "0.7rem",
+                          height: 22,
+                          border: "1px solid #334155",
+                          "&:hover": { bgcolor: "rgba(99,102,241,0.15)", color: "primary.main" },
+                        }}
+                      />
+                    ))}
+                  </Box>
+                </Paper>
+              </motion.div>
+            </Grid>
+          );
+        })}
+      </Grid>
+    </Box>
+  </motion.div>
+);
 
 export default Projects;

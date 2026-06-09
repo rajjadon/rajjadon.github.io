@@ -1,103 +1,91 @@
 import React from 'react';
-import { Typography, Box, Paper, Grid } from '@mui/material';
+import { Typography, Box } from '@mui/material';
 import { motion } from 'framer-motion';
 import skillsData from '../data/skills.json';
 
-const Skills = () => {
-  const categories = [
-    { title: 'Languages', items: skillsData.languages },
-    { title: 'Mobile Development', items: skillsData.mobile },
-    { title: 'Architecture', items: skillsData.architecture },
-    { title: 'Tools & Libraries', items: skillsData.tools },
-    { title: 'DevOps', items: skillsData.devOps },
-    { title: 'AI & Integration', items: skillsData.ai }
-  ];
+const CATEGORIES = [
+  { key: 'languages' as const, label: 'Languages', icon: '⚡' },
+  { key: 'mobile' as const, label: 'Mobile', icon: '📱' },
+  { key: 'architecture' as const, label: 'Architecture', icon: '🏗️' },
+  { key: 'tools' as const, label: 'Tools & Libraries', icon: '🔧' },
+  { key: 'devOps' as const, label: 'DevOps', icon: '🚀' },
+  { key: 'ai' as const, label: 'AI & Integration', icon: '🤖' },
+];
 
-  return (
-    <motion.div 
-      initial={{ opacity: 0, y: 40 }} 
-      animate={{ opacity: 1, y: 0 }} 
-      transition={{ duration: 0.9 }}
-    >
-      <Typography 
-          variant="h4" 
-          gutterBottom
-          sx={{ 
-            fontWeight: 600,
-            mb: 4
-          }}
-        >
-          Skills
-        </Typography>
+const Skills = () => (
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6 }}
+  >
+    <Box id="skills" sx={{ mb: 8 }}>
+      <Typography variant="h4" sx={{ mb: 1 }}>Skills</Typography>
+      <Typography variant="body2" color="text.secondary" sx={{ mb: 4 }}>
+        Technologies and tools I work with
+      </Typography>
 
-      <Paper 
-        elevation={4} 
-        sx={{ 
-          p: 3, 
-          mb: 5, 
-          borderRadius: 4, 
-          bgcolor: "#1e1e1e",
-          color: "white" 
-        }}
-      >
-
-        <Grid container spacing={4}>
-          {categories.map((category, index) => (
-            <Grid item xs={12} sm={6} key={category.title}>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+      <Box sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
+        {CATEGORIES.map((cat, catIndex) => (
+          <motion.div
+            key={cat.key}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: catIndex * 0.06 }}
+          >
+            <Box>
+              <Typography
+                variant="body2"
+                sx={{
+                  fontWeight: 700,
+                  mb: 1.5,
+                  color: "secondary.main",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 0.75,
+                  textTransform: "uppercase",
+                  letterSpacing: "0.08em",
+                  fontSize: "0.72rem",
+                }}
               >
-                <Typography
-                  variant="h6"
-                  sx={{
-                    fontSize: '1.2rem',
-                    fontWeight: 600,
-                    mb: 2,
-                    color: '#94a3b8'
-                  }}
-                >
-                  {category.title}
-                </Typography>
-                <Box
-                  sx={{
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    gap: 1
-                  }}
-                >
-                  {category.items.map((skill) => (
-                    <Box
-                      key={skill}
-                      component={motion.div}
-                      whileHover={{ scale: 1.05 }}
-                      sx={{
-                        bgcolor: '#2d2d2d',
-                        color: '#e2e8f0',
-                        px: 2,
-                        py: 1,
-                        borderRadius: 2,
-                        fontSize: '0.9rem',
-                        fontWeight: 500,
-                        transition: 'all 0.2s ease-in-out',
-                        '&:hover': {
-                          bgcolor: '#3b3b3b',
-                          color: '#3b82f6'
-                        }
-                      }}
-                    >
-                      {skill}
-                    </Box>
-                  ))}
-                </Box>
-              </motion.div>
-            </Grid>
-          ))}
-        </Grid>
-      </Paper>
-    </motion.div>
-  );
-};
+                <span>{cat.icon}</span>
+                {cat.label}
+              </Typography>
+              <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
+                {skillsData[cat.key].map((skill) => (
+                  <Box
+                    key={skill}
+                    component={motion.div}
+                    whileHover={{ scale: 1.05 }}
+                    sx={{
+                      px: 1.5,
+                      py: 0.5,
+                      borderRadius: 2,
+                      fontSize: "0.82rem",
+                      fontWeight: 500,
+                      bgcolor: "background.paper",
+                      color: "text.secondary",
+                      border: "1px solid #334155",
+                      cursor: "default",
+                      transition: "all 0.15s ease",
+                      "&:hover": {
+                        bgcolor: "rgba(99,102,241,0.12)",
+                        color: "primary.main",
+                        borderColor: "rgba(99,102,241,0.4)",
+                      },
+                    }}
+                  >
+                    {skill}
+                  </Box>
+                ))}
+              </Box>
+            </Box>
+          </motion.div>
+        ))}
+      </Box>
+    </Box>
+  </motion.div>
+);
 
 export default Skills;
