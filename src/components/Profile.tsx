@@ -4,7 +4,7 @@ import DownloadIcon from "@mui/icons-material/Download";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import { Box, Typography, IconButton, Avatar, Button, Tooltip, Chip } from "@mui/material";
+import { Box, Paper, Typography, IconButton, Avatar, Button, Tooltip, Chip } from "@mui/material";
 import { motion } from "framer-motion";
 
 const Profile = () => {
@@ -14,7 +14,17 @@ const Profile = () => {
   };
 
   return (
-    <Box sx={{ position: "relative", overflow: "hidden", mb: { xs: 5, md: 7 } }}>
+    <Paper
+      elevation={0}
+      sx={{
+        position: "relative",
+        overflow: "hidden",
+        borderRadius: 5,
+        px: { xs: 2.5, md: 6 },
+        py: { xs: 2, md: 3 },
+        mb: { xs: 5, md: 8 },
+      }}
+    >
       {/* Animated gradient accent blobs */}
       <Box
         component={motion.div}
@@ -66,8 +76,8 @@ const Profile = () => {
             alignItems: "center",
             justifyContent: "center",
             gap: { xs: 4, md: 9 },
-            py: { xs: 3, md: 5 },
-            minHeight: { md: "80vh" },
+            py: { xs: 4, md: 6 },
+            minHeight: { md: "62vh" },
           }}
         >
           {/* Text side */}
@@ -243,7 +253,7 @@ const Profile = () => {
           </Box>
         </Box>
       </motion.div>
-    </Box>
+    </Paper>
   );
 };
 

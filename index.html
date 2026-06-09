@@ -46,5 +46,18 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Kaily / Copilot chat widget — loaded directly via script (public token) -->
+    <script>
+      (function (w, d, s, o, f, js, fjs) {
+        w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments); };
+        js = d.createElement(s); fjs = d.getElementsByTagName(s)[0];
+        js.id = o;
+        js.src = "https://script.copilot.live/v1/copilot.min.js?tkn=cat-6r8kty8r";
+        js.async = 1; js.referrerPolicy = "origin";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(window, document, "script", "copilot");
+      copilot("init", {}, function () { window["_copilot_ready"] = true; });
+    </script>
   </body>
 </html>

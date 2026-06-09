@@ -36,11 +36,14 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           backgroundImage: "none",
-          // Opaque enough to read clearly, soft border so edges blend (no harsh line)
-          backgroundColor: "rgba(30,41,59,0.92)",
-          border: "1px solid rgba(148,163,184,0.12)",
-          backdropFilter: "blur(10px)",
-          WebkitBackdropFilter: "blur(10px)",
+          // Cards are defined by a soft translucent fill + depth shadow (no hard
+          // border line), so edges blend smoothly with the gradient background.
+          backgroundColor: "rgba(30,41,59,0.82)",
+          border: "1px solid transparent",
+          boxShadow:
+            "0 14px 40px -18px rgba(0,0,0,0.65), inset 0 1px 0 rgba(255,255,255,0.05)",
+          backdropFilter: "blur(14px)",
+          WebkitBackdropFilter: "blur(14px)",
         },
       },
     },

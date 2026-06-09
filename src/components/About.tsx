@@ -35,10 +35,10 @@ const About = () => (
         A bit about who I am
       </Typography>
 
-      <Grid container spacing={3} alignItems="stretch">
+      <Grid container spacing={{ xs: 2.5, md: 3 }} alignItems="flex-start">
         {/* Summary */}
         <Grid item xs={12} md={8}>
-          <Paper elevation={0} sx={{ p: { xs: 3, md: 4 }, borderRadius: 4, height: "100%" }}>
+          <Paper elevation={0} sx={{ p: { xs: 3, md: 4 }, borderRadius: 4 }}>
             <Typography variant="body1" sx={{ mb: 2, lineHeight: 1.9, fontSize: "1.05rem" }}>
               <Box component="span" sx={{ color: "primary.main", fontWeight: 600 }}>
                 AI &amp; Mobile Engineer
@@ -67,8 +67,7 @@ const About = () => (
             sx={{
               display: "flex",
               flexDirection: { xs: "row", md: "column" },
-              gap: 2,
-              height: "100%",
+              gap: { xs: 1.5, md: 2 },
             }}
           >
             {STATS.map((s) => (
@@ -77,17 +76,17 @@ const About = () => (
                 elevation={0}
                 sx={{
                   flex: 1,
-                  px: 3,
-                  py: { xs: 2, md: 2.5 },
+                  px: 2,
+                  py: { xs: 2, md: 2.75 },
                   borderRadius: 4,
                   textAlign: "center",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "center",
                   background:
-                    "linear-gradient(135deg, rgba(99,102,241,0.10), rgba(34,211,238,0.05))",
-                  transition: "border-color 0.2s, transform 0.2s",
-                  "&:hover": { borderColor: "#6366f1", transform: "translateY(-3px)" },
+                    "linear-gradient(135deg, rgba(99,102,241,0.12), rgba(34,211,238,0.06))",
+                  transition: "transform 0.2s",
+                  "&:hover": { transform: "translateY(-3px)" },
                 }}
               >
                 <Typography
