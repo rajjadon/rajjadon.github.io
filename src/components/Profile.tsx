@@ -14,7 +14,7 @@ const Profile = () => {
   };
 
   return (
-    <Box sx={{ position: "relative", overflow: "hidden", mb: { xs: 6, md: 10 } }}>
+    <Box sx={{ position: "relative", overflow: "hidden", mb: { xs: 5, md: 7 } }}>
       {/* Animated gradient accent blobs */}
       <Box
         component={motion.div}
@@ -66,7 +66,8 @@ const Profile = () => {
             alignItems: "center",
             justifyContent: "space-between",
             gap: { xs: 4, md: 6 },
-            py: { xs: 4, md: 8 },
+            py: { xs: 3, md: 5 },
+            minHeight: { md: "78vh" },
           }}
         >
           {/* Text side */}
