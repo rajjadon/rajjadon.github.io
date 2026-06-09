@@ -36,21 +36,22 @@ const Skills = () => (
           >
             <Box>
               <Typography
-                variant="body2"
+                variant="subtitle1"
                 sx={{
-                  fontWeight: 700,
+                  fontWeight: 800,
                   mb: 1.5,
-                  color: "secondary.main",
+                  color: "text.primary",
                   display: "flex",
                   alignItems: "center",
-                  gap: 0.75,
-                  textTransform: "uppercase",
-                  letterSpacing: "0.08em",
-                  fontSize: "0.72rem",
+                  gap: 1,
+                  letterSpacing: "0.01em",
                 }}
               >
-                <span>{cat.icon}</span>
+                <Box component="span" sx={{ fontSize: "1.25rem" }}>{cat.icon}</Box>
                 {cat.label}
+                <Box component="span" sx={{ color: "secondary.main", fontWeight: 600, fontSize: "0.8rem" }}>
+                  {skillsData[cat.key].length}
+                </Box>
               </Typography>
               <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
                 {skillsData[cat.key].map((skill) => (

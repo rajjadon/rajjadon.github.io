@@ -8,6 +8,7 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Education from './components/Education';
 import Contact from './components/Contact';
+import KailyChat from './components/KailyChat';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Education />
         <Contact />
       </Container>
+      <KailyChat />
     </Box>
   );
 };

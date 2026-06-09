@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import experienceData from '../data/experience.json';
 
-const PREVIEW_COUNT = 3;
+const PREVIEW_COUNT = 2;
 
 const ExperienceItem = ({ exp, index }: { exp: typeof experienceData[number]; index: number }) => {
   const [expanded, setExpanded] = useState(false);
