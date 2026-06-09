@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container } from '@mui/material';
+import { Box, Container } from '@mui/material';
+import NavBar from './components/NavBar';
 import Profile from './components/Profile';
 import About from './components/About';
 import Experience from './components/Experience';
@@ -10,7 +11,9 @@ import Contact from './components/Contact';
 
 const App = () => {
   return (
-      <Container maxWidth="lg" sx={{ py: 4 }}>
+    <Box sx={{ bgcolor: "background.default", minHeight: "100vh" }}>
+      <NavBar />
+      <Container maxWidth="lg" sx={{ pt: 10, pb: 8, px: { xs: 2, sm: 3 } }}>
         <Profile />
         <About />
         <Experience />
@@ -19,6 +22,7 @@ const App = () => {
         <Education />
         <Contact />
       </Container>
+    </Box>
   );
 };
 

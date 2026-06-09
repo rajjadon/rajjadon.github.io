@@ -9,6 +9,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      {/* Public widget token — restrict to rajjadon.github.io in Copilot.live dashboard */}
       <CopilotProvider token={import.meta.env.VITE_COPILOT_TOKEN || ""}>
         <App />
       </CopilotProvider>
