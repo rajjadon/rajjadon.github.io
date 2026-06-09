@@ -9,9 +9,9 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "@copilotlive/react-sdk": "^1.0.0",
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
+    "@kaily-ai/chat-sdk": "^2.1.5",
     "@mui/icons-material": "^5.15.8",
     "@mui/material": "^5.15.8",
     "framer-motion": "^12.14.0",

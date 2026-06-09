@@ -2,18 +2,20 @@ import React from "react";
 import { Box, Typography, Paper } from "@mui/material";
 import { motion } from "framer-motion";
 
+// Single source of truth for experience — auto-computed from career start.
+const CAREER_START = new Date("2019-01-01");
+const yearsOfExperience = Math.floor(
+  (Date.now() - CAREER_START.getTime()) / (1000 * 60 * 60 * 24 * 365.25)
+);
+
 const STATS = [
-  { value: "6+", label: "Years Experience" },
+  { value: `${yearsOfExperience}+`, label: "Years Experience" },
   { value: "10+", label: "Projects Shipped" },
   { value: "5", label: "Companies" },
 ];
 
 const About = () => {
-  const calculateExperience = () => {
-    const start = new Date("2019-01-01");
-    const diff = (new Date().getTime() - start.getTime()) / (1000 * 60 * 60 * 24 * 365.25);
-    return Math.floor(diff);
-  };
+  const calculateExperience = () => yearsOfExperience;
 
   return (
     <motion.div
