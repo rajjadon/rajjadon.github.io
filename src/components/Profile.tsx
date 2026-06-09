@@ -64,14 +64,14 @@ const Profile = () => {
             display: "flex",
             flexDirection: { xs: "column-reverse", md: "row" },
             alignItems: "center",
-            justifyContent: "space-between",
-            gap: { xs: 4, md: 6 },
+            justifyContent: "center",
+            gap: { xs: 4, md: 9 },
             py: { xs: 3, md: 5 },
-            minHeight: { md: "78vh" },
+            minHeight: { md: "80vh" },
           }}
         >
           {/* Text side */}
-          <Box sx={{ flex: 1, textAlign: { xs: "center", md: "left" } }}>
+          <Box sx={{ flexShrink: 1, maxWidth: 560, textAlign: { xs: "center", md: "left" } }}>
             <Chip
               label="● Open to opportunities"
               size="small"
@@ -220,18 +220,33 @@ const Profile = () => {
           </Box>
 
           {/* Avatar side */}
-          <Box sx={{ flexShrink: 0, position: "relative" }}>
+          <Box sx={{ flexShrink: 0, position: "relative", display: "grid", placeItems: "center" }}>
+            {/* Decorative dotted ring */}
+            <Box
+              aria-hidden
+              component={motion.div}
+              animate={{ rotate: 360 }}
+              transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+              sx={{
+                position: "absolute",
+                width: { xs: 230, md: 320 },
+                height: { xs: 230, md: 320 },
+                borderRadius: "50%",
+                border: "1px dashed rgba(148,163,184,0.25)",
+                pointerEvents: "none",
+              }}
+            />
             <Box
               component={motion.div}
               animate={{ scale: [1, 1.04, 1] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
               sx={{
-                width: { xs: 170, md: 230 },
-                height: { xs: 170, md: 230 },
+                width: { xs: 190, md: 270 },
+                height: { xs: 190, md: 270 },
                 borderRadius: "50%",
                 p: "4px",
                 background: "linear-gradient(135deg, #6366f1, #22d3ee)",
-                boxShadow: "0 0 60px rgba(99,102,241,0.4)",
+                boxShadow: "0 0 80px rgba(99,102,241,0.45)",
               }}
             >
               <Avatar

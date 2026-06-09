@@ -82,28 +82,33 @@ const FeaturedCard = ({ project }: { project: Project }) => {
           }}
         />
         <Box sx={{ position: "relative" }}>
-          <Chip
-            label="★ Flagship Product"
-            size="small"
-            sx={{
-              mb: 1.5,
-              bgcolor: "rgba(34,211,238,0.15)",
-              color: "#22d3ee",
-              border: "1px solid rgba(34,211,238,0.4)",
-              fontWeight: 700,
-              fontSize: "0.68rem",
-            }}
-          />
+          <Box sx={{ mb: 1.5 }}>
+            <Chip
+              label="★ Flagship Product"
+              size="small"
+              sx={{
+                bgcolor: "rgba(34,211,238,0.15)",
+                color: "#22d3ee",
+                border: "1px solid rgba(34,211,238,0.4)",
+                fontWeight: 700,
+                fontSize: "0.68rem",
+              }}
+            />
+          </Box>
           <Typography
-            variant="h4"
+            variant="h3"
             component={url ? Link : "h3"}
             href={url ?? undefined}
             target={url ? "_blank" : undefined}
             rel={url ? "noopener noreferrer" : undefined}
             sx={{
-              display: "inline-block",
+              display: "block",
               fontWeight: 800,
+              fontSize: { xs: "2rem", md: "2.6rem" },
+              lineHeight: 1.25,
+              pb: "0.12em",
               textDecoration: "none",
+              width: "fit-content",
               background: "linear-gradient(135deg, #6366f1, #22d3ee)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",

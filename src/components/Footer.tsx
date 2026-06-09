@@ -53,7 +53,7 @@ const Footer = () => (
       <Divider sx={{ my: 2.5 }} />
 
       <Typography variant="caption" color="text.secondary" sx={{ display: "block", textAlign: "center" }}>
-        © {new Date().getFullYear()} {profile.name.split(" ")[0]} · Built with React &amp; Material UI
+        © {new Date().getFullYear()} {profile.name}
       </Typography>
     </Container>
   </Box>

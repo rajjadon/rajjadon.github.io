@@ -24,11 +24,14 @@ const About = () => (
     <Box id="about" sx={{ mb: { xs: 8, md: 12 } }}>
       <Typography
         variant="overline"
-        sx={{ color: "secondary.main", fontWeight: 700, letterSpacing: "0.15em" }}
+        sx={{ color: "secondary.main", fontWeight: 700, letterSpacing: "0.15em", display: "block" }}
       >
         ABOUT ME
       </Typography>
-      <Typography variant="h4" sx={{ mb: 4, mt: 0.5 }}>
+      <Typography
+        variant="h4"
+        sx={{ mb: 4, mt: 0.5, fontSize: { xs: "1.6rem", sm: "2rem" }, lineHeight: 1.2 }}
+      >
         A bit about who I am
       </Typography>
 
