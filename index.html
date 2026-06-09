@@ -7,14 +7,18 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
     <!-- Security headers -->
+    <!-- CSP allows the Kaily/Copilot chat widget (script.copilot.live loader + its
+         api/cdn/platform/public subdomains, kaily.ai, fonts, and voice/video media). -->
     <meta http-equiv="Content-Security-Policy"
       content="default-src 'self';
-               script-src 'self' 'unsafe-inline' https://*.copilot.live;
-               style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-               font-src 'self' https://fonts.gstatic.com;
-               img-src 'self' data: https:;
-               connect-src 'self' https://*.copilot.live wss://*.copilot.live;
-               frame-src https://*.copilot.live;
+               script-src 'self' 'unsafe-inline' https://*.copilot.live https://*.kaily.ai;
+               style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.copilot.live https://*.kaily.ai;
+               font-src 'self' data: https://fonts.gstatic.com https://*.copilot.live https://*.kaily.ai;
+               img-src 'self' data: blob: https:;
+               media-src 'self' blob: https://*.copilot.live https://*.kaily.ai;
+               worker-src 'self' blob:;
+               connect-src 'self' https://*.copilot.live wss://*.copilot.live https://*.kaily.ai wss://*.kaily.ai https://fonts.googleapis.com;
+               frame-src https://*.copilot.live https://*.kaily.ai;
                frame-ancestors 'none';">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
