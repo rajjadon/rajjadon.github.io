@@ -221,21 +221,6 @@ const Profile = () => {
 
           {/* Avatar side */}
           <Box sx={{ flexShrink: 0, position: "relative", display: "grid", placeItems: "center" }}>
-            {/* Decorative dotted ring */}
-            <Box
-              aria-hidden
-              component={motion.div}
-              animate={{ rotate: 360 }}
-              transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-              sx={{
-                position: "absolute",
-                width: { xs: 230, md: 320 },
-                height: { xs: 230, md: 320 },
-                borderRadius: "50%",
-                border: "1px dashed rgba(148,163,184,0.25)",
-                pointerEvents: "none",
-              }}
-            />
             <Box
               component={motion.div}
               animate={{ scale: [1, 1.04, 1] }}
