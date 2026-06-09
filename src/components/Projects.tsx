@@ -10,9 +10,9 @@ const extractUrl = (markdownLink: string) => {
 };
 
 const getLinkLabel = (project: typeof projectsData[number], link: string, i: number) => {
-  if (project.name === 'Copilot SDK + AI Agent Features') {
-    if (link.includes('github.com')) return 'GitHub';
-    if (link.includes('docs.copilot.live')) return 'Docs';
+  if (project.name === 'Kaily.ai') {
+    if (link.includes('docs.kaily.ai')) return 'Docs';
+    if (link.includes('kaily.ai')) return 'Website';
   }
   if (project.name === 'Pixelbin Suite') {
     if (link.includes('upscale.media')) return 'Upscale.media';
@@ -41,6 +41,7 @@ const Projects = () => (
         {projectsData.map((project, index) => {
           const projectUrl = project.name_link ? extractUrl(project.name_link) : null;
           const links = project.links ?? (project.link ? [project.link] : []);
+          const clients = (project as { clients?: string[] }).clients ?? [];
 
           return (
             <Grid item xs={12} md={6} key={project.name}>
@@ -114,6 +115,43 @@ const Projects = () => (
                   >
                     {project.description}
                   </Typography>
+
+                  {/* Trusted-by clients */}
+                  {clients.length > 0 && (
+                    <Box sx={{ mb: 2 }}>
+                      <Typography
+                        variant="caption"
+                        sx={{
+                          display: "block",
+                          mb: 0.75,
+                          color: "text.secondary",
+                          textTransform: "uppercase",
+                          letterSpacing: "0.08em",
+                          fontWeight: 700,
+                          fontSize: "0.65rem",
+                        }}
+                      >
+                        Powering AI agents for
+                      </Typography>
+                      <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.75 }}>
+                        {clients.map((client) => (
+                          <Chip
+                            key={client}
+                            label={client}
+                            size="small"
+                            sx={{
+                              bgcolor: "rgba(34,211,238,0.1)",
+                              color: "secondary.main",
+                              border: "1px solid rgba(34,211,238,0.3)",
+                              fontWeight: 600,
+                              fontSize: "0.7rem",
+                              height: 22,
+                            }}
+                          />
+                        ))}
+                      </Box>
+                    </Box>
+                  )}
 
                   {/* Extra links (multi-link projects) */}
                   {links.length > 1 && (

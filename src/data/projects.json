@@ -1,15 +1,22 @@
 [
   {
-    "name": "Copilot SDK + AI Agent Features",
-    "name_link": "[Copilot SDK](https://docs.copilot.live/deployments/mobile/android-sdk/)",
+    "name": "Kaily.ai",
+    "name_link": "[Kaily.ai](https://www.kaily.ai)",
     "company": "Fynd",
-    "description": "LLM-powered SDK and platform enabling tool-triggering, context sync, and multimodal AI agents (voice/video).",
+    "description": "Enterprise conversational-AI agent platform (formerly Fynd Copilot) enabling LLM tool-triggering, context sync, and multimodal voice/video agents — deployed across leading Indian retail brands.",
+    "clients": [
+      "JioMart",
+      "Ajio",
+      "Being Human",
+      "Pantaloons",
+      "Guess"
+    ],
     "responsibilities": [
       "Built dynamic tool calling system to let LLMs trigger frontend actions in real time.",
       "Implemented context state updates so the LLM is always aware of app/frontend state.",
       "Developed AI video call feature with LLM response streaming into video avatars.",
       "Currently building AI voice call SDK (Go + JS) with low-latency STT and TTS pipelines.",
-      "Led Android SDK design for Copilot agents, ensuring modular, developer-friendly integration.",
+      "Led Android SDK design for Kaily.ai agents, ensuring modular, developer-friendly integration.",
       "Wrote official documentation, code examples, and developer onboarding materials."
     ],
     "tech": [
@@ -29,8 +36,8 @@
     ],
     "team_size": 2,
     "links": [
-      "https://github.com/CopilotLive/sdk-android-examples",
-      "https://docs.copilot.live/ai-actions/client/"
+      "https://www.kaily.ai",
+      "https://docs.kaily.ai"
     ]
   },
   {
