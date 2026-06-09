@@ -61,7 +61,7 @@ const FeaturedCard = ({ project }: { project: Project }) => {
           borderRadius: 4,
           mb: 3,
           p: { xs: 3, md: 4 },
-          border: "1px solid rgba(99,102,241,0.4)",
+          border: "1px solid rgba(148,163,184,0.12)",
           background:
             "linear-gradient(135deg, rgba(99,102,241,0.12), rgba(34,211,238,0.06))",
         }}
